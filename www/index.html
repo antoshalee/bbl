@@ -1,0 +1,937 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Buy by like</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+	<script src="js/jquery.masonry.min.js"></script>
+	<script src="js/jquery.slideit.js"></script>
+	<script src="js/jquery.jscrollpane.js"></script>
+	<script src="js/jquery.mousewheel.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+
+<div id="flag"></div>
+
+<header role="banner" id="header">
+	<div class="wrap">
+		<a href="/"><img src="i/logo.png" width="128" height="27" alt="" class="logo"></a>
+		<ul class="sitenav">
+			<li class="sitenav__item current"><a href="/" class="sitenav__link">Старт</a></li>
+			<li class="sitenav__item"><a href="/offers" class="sitenav__link">Акции</a></li>
+			<li class="sitenav__item"><a href="/about" class="sitenav__link">О проекте</a></li>
+			<li class="sitenav__item"><a href="/business" class="sitenav__link">Бизнесу</a></li>
+		</ul>
+		<div class="bar">
+			<div class="cityselect">
+				<div class="cityselect__current">Москва</div>
+			</div>
+			<div class="userbar opened">
+				<div class="userbar__userpic">
+					<img src="content/userpic.jpg" width="22" height="22" class="userbar__userpic_photo" alt="">
+					<div class="userbar__menu">
+						<ul class="userbar__menu_list">
+							<li class="userbar__menu_item"><a href="#" class="userbar__link">Мои купоны</a></li>
+							<li class="userbar__menu_item"><a href="#" class="userbar__link">Настройки</a></li>
+						</ul>
+						<div class="userbar__logout"><a href="#" class="userbar__link">Выйти</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="basket">
+				<div class="basket__count">3</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class="start" id="start">
+	<div class="start__wrap wrap">
+		<div class="start__control">
+			<div class="wrap">
+				<div class="start__control_arrows">
+					<div class="start__control_prev"></div>
+					<div class="start__control_next"></div>
+				</div>
+				<ul class="start__control_paging"></ul>
+			</div>
+		</div>
+		<div class="start__viewport">
+			<ul class="start__list">
+				<li class="start__item">
+					<div class="specoffer">
+						<img src="content/specoffer.jpg" width="599" height="222" alt="">
+					</div>
+				</li>
+				<li class="start__item">
+					<div class="specoffer">
+						<img src="content/specoffer.jpg" width="599" height="222" alt="">
+					</div>
+				</li>
+				<li class="start__item">
+					<div class="specoffer">
+						<img src="content/specoffer.jpg" width="599" height="222" alt="">
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<footer class="start__footer">
+		<div class="start__footer_wrap wrap">
+			<div class="contacts">
+				<div class="contacts__phone">
+					<div class="contacts__icon phone"></div>
+					Тел.: <span class="phone">8 (495) 640 4950</span>
+				</div>
+				<div class="contacts__mail">
+					<div class="contacts__icon mail"></div>
+					<a href="mailto:mail@buybylike.com" class="contacts__link">mail@buybylike.com</a>
+				</div>
+				<div class="contacts__social">
+					В соцсетях:
+					<ul class="social">
+						<li class="social__item">
+							<a href="#" class="social__link"><img src="i/icons/social.gif" width="64" height="32" alt="" class="social__icon fb"></a>
+						</li>
+						<li class="social__item">
+							<a href="#" class="social__link"><img src="i/icons/social.gif" width="64" height="32" alt="" class="social__icon tw"></a>
+						</li>
+						<li class="social__item">
+							<a href="#" class="social__link"><img src="i/icons/social.gif" width="64" height="32" alt="" class="social__icon vk"></a>
+						</li>
+						<li class="social__item">
+							<a href="#" class="social__link"><img src="i/icons/social.gif" width="64" height="32" alt="" class="social__icon od"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="start__tooffers"><a href="#!/offers" class="start__tooffers_link">Все акции</a></div>
+			<div class="search">
+				<form action="/" method="post">
+					<input type="text" name="q" class="search__input" placeholder="Поиск по акциям">
+					<button type="submit" class="search__submit"><img src="i/icons/icons.gif" width="64" height="32" class="search__submit_icon" alt=""></button>
+				</form>
+			</div>
+			<div class="start__tostart">
+				<div class="start__tostart_icon"></div>
+				<a href="#!/start" class="start__tostart_link">На главную</a>
+			</div>
+		</div>
+	</footer>
+</div>
+
+<div role="main" class="content wrap" id="offers">
+	<aside class="sidebar" role="complementary">
+		<form action="/" method="get" class="filter">
+			<ul class="filter__sections">
+				<li class="filter__sections_item">
+					<input type="radio" name="section" id="filter_section_popular" class="filter__radio" value="popular" checked>
+					<div class="filter__field">
+						<label class="filter__label" for="filter_section_popular">Популярное</label>
+					</div>
+				</li>
+				<li class="filter__sections_item">
+					<input type="radio" name="section" id="filter_section_recommended" value="recommeded" class="filter__radio">
+					<div class="filter__field">
+						<label class="filter__label" for="filter_section_recommended">Рекомендованные</label>
+					</div>
+				</li>
+				<li class="filter__sections_item">
+					<input type="checkbox" class="filter__ch" name="price" id="filter_price" checked>
+					<div class="filter__field">
+						<label for="filter_price" class="filter__label">Стоимость до</label>
+						<input type="text" name="price_val" class="filter__price_val"> руб.
+					</div>
+				</li>
+			</ul>
+			<div class="filter__cats_wrap">
+				<div class="filter__cats filter__scrollpane">
+					<ul class="filter__cats_list">
+						<li class="filter__cats_item">
+							<input type="checkbox" class="filter__ch" name="cats[]" value="1" id="cat-1">
+							<label for="cat-1" class="filter__cats_label">
+								Еда
+								<span class="filter__cats_count">(122)</span>
+							</label>
+						</li>
+						<li class="filter__cats_item">
+							<input type="checkbox" class="filter__ch" name="cats[]" value="2" id="cat-2">
+							<label for="cat-2" class="filter__cats_label">
+								Отдых
+								<span class="filter__cats_count">(15)</span>
+							</label>
+						</li>
+						<li class="filter__cats_item">
+							<input type="checkbox" class="filter__ch" name="cats[]" value="3" id="cat-3">
+							<label for="cat-3" class="filter__cats_label">
+								Красота и здоровье
+								<span class="filter__cats_count">(122)</span>
+							</label>
+						</li>
+						<li class="filter__cats_item">
+							<input type="checkbox" class="filter__ch" name="cats[]" value="4" id="cat-4">
+							<label for="cat-4" class="filter__cats_label">
+								Услуги
+								<span class="filter__cats_count">(54)</span>
+							</label>
+						</li>
+						<li class="filter__cats_item">
+							<input type="checkbox" class="filter__ch" name="cats[]" value="5" id="cat-5">
+							<label for="cat-5" class="filter__cats_label">
+								Концерты
+								<span class="filter__cats_count">(15)</span>
+							</label>
+						</li>
+						<li class="filter__cats_item">
+							<input type="checkbox" class="filter__ch" name="cats[]" value="6" id="cat-6">
+							<label for="cat-6" class="filter__cats_label">
+								Туры
+								<span class="filter__cats_count">(55)</span>
+							</label>
+						</li>
+						<li class="filter__cats_item">
+							<input type="checkbox" class="filter__ch" name="cats[]" value="7" id="cat-7">
+							<label for="cat-7" class="filter__cats_label">
+								Товары
+								<span class="filter__cats_count">(2234)</span>
+							</label>
+						</li>
+						<li class="filter__cats_item">
+							<input type="checkbox" class="filter__ch" name="cats[]" value="8" id="cat-8">
+							<label for="cat-8" class="filter__cats_label">
+								Игры
+								<span class="filter__cats_count">(112)</span>
+							</label>
+						</li>
+						<li class="filter__cats_item">
+							<input type="checkbox" class="filter__ch" name="cats[]" value="9" id="cat-9">
+							<label for="cat-9" class="filter__cats_label">
+								Музыка
+								<span class="filter__cats_count">(315)</span>
+							</label>
+						</li>
+						<li class="filter__cats_item">
+							<input type="checkbox" class="filter__ch" name="cats[]" value="10" id="cat-10">
+							<label for="cat-10" class="filter__cats_label">
+								Фильмы
+								<span class="filter__cats_count">(112)</span>
+							</label>
+						</li>
+						<li class="filter__cats_item">
+							<input type="checkbox" class="filter__ch" name="cats[]" value="11" id="cat-11">
+							<label for="cat-11" class="filter__cats_label">
+								Программы
+								<span class="filter__cats_count">(54)</span>
+							</label>
+						</li>
+						<li class="filter__cats_item">
+							<input type="checkbox" class="filter__ch" name="cats[]" value="12" id="cat-12">
+							<label for="cat-12" class="filter__cats_label">
+								Б/У
+								<span class="filter__cats_count">(122)</span>
+							</label>
+						</li>
+						<li class="filter__cats_item">
+							<input type="checkbox" class="filter__ch" name="cats[]" value="13" id="cat-13">
+							<label for="cat-13" class="filter__cats_label">
+								Бесплатно
+								<span class="filter__cats_count">(14)</span>
+							</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</form>
+	</aside>
+	<div class="main">
+		<div class="offers">
+			<article class="offer ll" id="1">
+				<div class="offer__wrapper">
+					<div class="ll__wrap">
+						<div class="ll__gallery">
+							<div class="ll__gallery_viewport">
+								<ul class="ll__gallery_list">
+									<li class="ll__gallery_item"><img src="content/offer_ll_1.jpg" width="447" height="307" alt=""></li>
+									<li class="ll__gallery_item"><img src="content/offer_ll_2.jpg" width="447" height="307" alt=""></li>
+								</ul>
+							</div>
+							<div class="ll__gallery_control">
+								<div class="ll__gallery_control_wrap">
+									<div class="ll__gallery_control_prev"></div>
+									<div class="ll__gallery_control_next"></div>
+								</div>
+							</div>
+						</div>
+						<div class="offer__brief_desc">
+							<div class="offer__price">
+								<div class="offer__price_new">
+									<strong class="offer__price_sum">935</strong>
+									<sup class="offer__price_currence">руб.</sup>
+								</div>
+								<div class="offer__price_old">
+									<strong class="offer__price_sum">1355</strong>
+									<sup class="offer__price_currence">руб.</sup>
+								</div>
+							</div>
+							<hgroup class="offer__header">
+								<h1 class="offer__header_title">Брозовый загар в солярии за пол</h1>	
+							</hgroup>
+							<div class="offer__brief_desc_body">Удивите своих друзей на новый год, станьте супермэном! Еще несколько строк для трех строк чтоб был в них толк, в не просто переполк. Всего три строки может быть.</div>
+						</div>
+					</div>
+				</div>
+			</article>
+			<article class="offer ss" id="2">
+				<div class="offer__wrapper">
+					<div class="offer__wrap">
+						<div class="offer__brief">
+							<div class="offer__brief_wrap">
+								<div class="offer__brief_pic">
+									<img src="content/offer_ss_4.jpg" width="208" height="141" alt="">
+								</div>
+								<div class="offer__brief_desc">
+									<div class="offer__price">
+										<div class="offer__price_new">
+											<strong class="offer__price_sum">935</strong>
+											<sup class="offer__price_currence">руб.</sup>
+										</div>
+										<div class="offer__price_old">
+											<strong class="offer__price_sum">1355</strong>
+											<sup class="offer__price_currence">руб.</sup>
+										</div>
+									</div>
+									<h1 class="offer__header_title">Брозовый загар в солярии за пол</h1>
+								</div>
+							</div>
+						</div>
+						<div class="offer__full">
+							<div class="offer__full_wrap">
+								<header class="offer__full_header">
+									<div class="offer__full_pic">
+										<img src="content/offer_thumb.jpg" width="42" height="42" alt="">
+									</div>
+									<h1 class="offer__header_title">Брозовый загар в солярии за полцены</h1>
+								</header>
+								<div class="offer__full_desc">
+									Удивите своих друзей на новый год, станьте супермэном! Еще несколько строк для трех строк чтоб был в них толк, в не просто переполк. Всего три строки ...
+								</div>
+								<div class="offer__price">
+									<div class="offer__price_new">
+										<strong class="offer__price_sum">935</strong>
+										<sup class="offer__price_currence">руб.</sup>
+									</div>
+									<div class="offer__price_old">
+										<strong class="offer__price_sum">1355</strong>
+										<sup class="offer__price_currence">руб.</sup>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+			<article class="offer ss" id="3">
+				<div class="offer__wrapper">
+					<div class="offer__wrap">
+						<div class="offer__brief">
+							<div class="offer__brief_wrap">
+								<div class="offer__brief_pic">
+									<img src="content/offer_ss_2.jpg" width="208" height="141" alt="">
+								</div>
+								<div class="offer__brief_desc">
+									<div class="offer__price">
+										<div class="offer__price_new">
+											<strong class="offer__price_sum">935</strong>
+											<sup class="offer__price_currence">руб.</sup>
+										</div>
+										<div class="offer__price_old">
+											<strong class="offer__price_sum">1355</strong>
+											<sup class="offer__price_currence">руб.</sup>
+										</div>
+									</div>
+									<h1 class="offer__header_title">Брозовый загар в солярии за пол</h1>
+								</div>
+							</div>
+						</div>
+						<div class="offer__full">
+							<div class="offer__full_wrap">
+								<header class="offer__full_header">
+									<div class="offer__full_pic">
+										<img src="content/offer_thumb.jpg" width="42" height="42" alt="">
+									</div>
+									<h1 class="offer__header_title">Брозовый загар в солярии за полцены</h1>
+								</header>
+								<div class="offer__full_desc">
+									Удивите своих друзей на новый год, станьте супермэном! Еще несколько строк для трех строк чтоб был в них толк, в не просто переполк. Всего три строки ...
+								</div>
+								<div class="offer__price">
+									<div class="offer__price_new">
+										<strong class="offer__price_sum">935</strong>
+										<sup class="offer__price_currence">руб.</sup>
+									</div>
+									<div class="offer__price_old">
+										<strong class="offer__price_sum">1355</strong>
+										<sup class="offer__price_currence">руб.</sup>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+			<article class="offer ls" id="4">
+				<div class="offer__wrapper">
+					<div class="offer__wrap">
+						<div class="offer__brief">
+							<div class="offer__brief_wrap">
+								<div class="offer__brief_pic">
+									<img src="content/offer_ls.jpg" width="448" height="178" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="offer__full">
+							<div class="offer__full_wrap">
+								<header class="offer__full_header">
+									<div class="offer__full_pic">
+										<img src="content/offer_thumb.jpg" width="42" height="42" alt="">
+									</div>
+									<h1 class="offer__header_title">Брозовый загар в солярии за полцены</h1>
+								</header>
+								<div class="offer__full_desc">
+									Удивите своих друзей на новый год, станьте супермэном! Еще несколько строк для трех строк чтоб был в них толк, в не просто переполк. Всего три строки ...
+								</div>
+								<div class="offer__price">
+									<div class="offer__price_new">
+										<strong class="offer__price_sum">935</strong>
+										<sup class="offer__price_currence">руб.</sup>
+									</div>
+									<div class="offer__price_old">
+										<strong class="offer__price_sum">1355</strong>
+										<sup class="offer__price_currence">руб.</sup>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+			<article class="offer ss" id="5">
+				<div class="offer__wrapper">
+					<div class="offer__wrap">
+						<div class="offer__brief">
+							<div class="offer__brief_wrap">
+								<div class="offer__brief_pic">
+									<img src="content/offer_ss_1.jpg" width="208" height="141" alt="">
+								</div>
+								<div class="offer__brief_desc">
+									<div class="offer__price">
+										<div class="offer__price_new">
+											<strong class="offer__price_sum">935</strong>
+											<sup class="offer__price_currence">руб.</sup>
+										</div>
+										<div class="offer__price_old">
+											<strong class="offer__price_sum">1355</strong>
+											<sup class="offer__price_currence">руб.</sup>
+										</div>
+									</div>
+									<h1 class="offer__header_title">Брозовый загар в солярии за пол</h1>
+								</div>
+							</div>
+						</div>
+						<div class="offer__full">
+							<div class="offer__full_wrap">
+								<header class="offer__full_header">
+									<div class="offer__full_pic">
+										<img src="content/offer_thumb.jpg" width="42" height="42" alt="">
+									</div>
+									<h1 class="offer__header_title">Брозовый загар в солярии за полцены</h1>
+								</header>
+								<div class="offer__full_desc">
+									Удивите своих друзей на новый год, станьте супермэном! Еще несколько строк для трех строк чтоб был в них толк, в не просто переполк. Всего три строки ...
+								</div>
+								<div class="offer__price">
+									<div class="offer__price_new">
+										<strong class="offer__price_sum">935</strong>
+										<sup class="offer__price_currence">руб.</sup>
+									</div>
+									<div class="offer__price_old">
+										<strong class="offer__price_sum">1355</strong>
+										<sup class="offer__price_currence">руб.</sup>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+			<article class="offer ss" id="6">
+				<div class="offer__wrapper">
+					<div class="offer__wrap">
+						<div class="offer__brief">
+							<div class="offer__brief_wrap">
+								<div class="offer__brief_pic">
+									<img src="content/offer_ss_2.jpg" width="208" height="141" alt="">
+								</div>
+								<div class="offer__brief_desc">
+									<div class="offer__price">
+										<div class="offer__price_new">
+											<strong class="offer__price_sum">935</strong>
+											<sup class="offer__price_currence">руб.</sup>
+										</div>
+										<div class="offer__price_old">
+											<strong class="offer__price_sum">1355</strong>
+											<sup class="offer__price_currence">руб.</sup>
+										</div>
+									</div>
+									<h1 class="offer__header_title">Брозовый загар в солярии за пол</h1>
+								</div>
+							</div>
+						</div>
+						<div class="offer__full">
+							<div class="offer__full_wrap">
+								<header class="offer__full_header">
+									<div class="offer__full_pic">
+										<img src="content/offer_thumb.jpg" width="42" height="42" alt="">
+									</div>
+									<h1 class="offer__header_title">Брозовый загар в солярии за полцены</h1>
+								</header>
+								<div class="offer__full_desc">
+									Удивите своих друзей на новый год, станьте супермэном! Еще несколько строк для трех строк чтоб был в них толк, в не просто переполк. Всего три строки ...
+								</div>
+								<div class="offer__price">
+									<div class="offer__price_new">
+										<strong class="offer__price_sum">935</strong>
+										<sup class="offer__price_currence">руб.</sup>
+									</div>
+									<div class="offer__price_old">
+										<strong class="offer__price_sum">1355</strong>
+										<sup class="offer__price_currence">руб.</sup>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+			<article class="offer ss" id="7">
+				<div class="offer__wrapper">		
+					<div class="offer__wrap">
+						<div class="offer__brief">
+							<div class="offer__brief_wrap">
+								<div class="offer__brief_pic">
+									<img src="content/offer_ss_3.jpg" width="208" height="141" alt="">
+								</div>
+								<div class="offer__brief_desc">
+									<div class="offer__price">
+										<div class="offer__price_new">
+											<strong class="offer__price_sum">935</strong>
+											<sup class="offer__price_currence">руб.</sup>
+										</div>
+										<div class="offer__price_old">
+											<strong class="offer__price_sum">1355</strong>
+											<sup class="offer__price_currence">руб.</sup>
+										</div>
+									</div>
+									<h1 class="offer__header_title">Брозовый загар в солярии за пол</h1>
+								</div>
+							</div>
+						</div>
+						<div class="offer__full">
+							<div class="offer__full_wrap">
+								<header class="offer__full_header">
+									<div class="offer__full_pic">
+										<img src="content/offer_thumb.jpg" width="42" height="42" alt="">
+									</div>
+									<h1 class="offer__header_title">Брозовый загар в солярии за полцены</h1>
+								</header>
+								<div class="offer__full_desc">
+									Удивите своих друзей на новый год, станьте супермэном! Еще несколько строк для трех строк чтоб был в них толк, в не просто переполк. Всего три строки ...
+								</div>
+								<div class="offer__price">
+									<div class="offer__price_new">
+										<strong class="offer__price_sum">935</strong>
+										<sup class="offer__price_currence">руб.</sup>
+									</div>
+									<div class="offer__price_old">
+										<strong class="offer__price_sum">1355</strong>
+										<sup class="offer__price_currence">руб.</sup>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+			<article class="offer sl" id="8">
+				<div class="offer__wrapper">
+					<div class="offer__wrap">
+						<div class="offer__brief">
+							<div class="offer__brief_wrap">
+								<div class="offer__brief_pic">
+									<img src="content/offer_sl.jpg" width="208" height="349" alt="">
+								</div>
+								<div class="offer__brief_desc">
+									<div class="offer__price">
+										<div class="offer__price_new">
+											<strong class="offer__price_sum">935</strong>
+											<sup class="offer__price_currence">руб.</sup>
+										</div>
+										<div class="offer__price_old">
+											<strong class="offer__price_sum">1355</strong>
+											<sup class="offer__price_currence">руб.</sup>
+										</div>
+									</div>
+									<h1 class="offer__header_title">Брозовый загар в солярии за пол</h1>
+								</div>
+							</div>
+						</div>
+						<div class="offer__full">
+							<div class="offer__full_wrap">
+								<header class="offer__full_header">
+									<div class="offer__full_pic">
+										<img src="content/offer_thumb.jpg" width="42" height="42" alt="">
+									</div>
+									<h1 class="offer__header_title">Брозовый загар в солярии за полцены</h1>
+								</header>
+								<div class="offer__full_desc">
+									Удивите своих друзей на новый год, станьте супермэном! Еще несколько строк для трех строк чтоб был в них толк, в не просто переполк. Всего три строки ...
+								</div>
+								<div class="offer__price">
+									<div class="offer__price_new">
+										<strong class="offer__price_sum">935</strong>
+										<sup class="offer__price_currence">руб.</sup>
+									</div>
+									<div class="offer__price_old">
+										<strong class="offer__price_sum">1355</strong>
+										<sup class="offer__price_currence">руб.</sup>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+			<article class="offer ss" id="9">
+				<div class="offer__wrapper">
+					<div class="offer__wrap">
+						<div class="offer__brief">
+							<div class="offer__brief_wrap">
+								<div class="offer__brief_pic">
+									<img src="content/offer_ss_4.jpg" width="208" height="141" alt="">
+								</div>
+								<div class="offer__brief_desc">
+									<div class="offer__price">
+										<div class="offer__price_new">
+											<strong class="offer__price_sum">935</strong>
+											<sup class="offer__price_currence">руб.</sup>
+										</div>
+										<div class="offer__price_old">
+											<strong class="offer__price_sum">1355</strong>
+											<sup class="offer__price_currence">руб.</sup>
+										</div>
+									</div>
+									<h1 class="offer__header_title">Брозовый загар в солярии за пол</h1>
+								</div>
+							</div>
+						</div>
+						<div class="offer__full">
+							<div class="offer__full_wrap">
+								<header class="offer__full_header">
+									<div class="offer__full_pic">
+										<img src="content/offer_thumb.jpg" width="42" height="42" alt="">
+									</div>
+									<h1 class="offer__header_title">Брозовый загар в солярии за полцены</h1>
+								</header>
+								<div class="offer__full_desc">
+									Удивите своих друзей на новый год, станьте супермэном! Еще несколько строк для трех строк чтоб был в них толк, в не просто переполк. Всего три строки ...
+								</div>
+								<div class="offer__price">
+									<div class="offer__price_new">
+										<strong class="offer__price_sum">935</strong>
+										<sup class="offer__price_currence">руб.</sup>
+									</div>
+									<div class="offer__price_old">
+										<strong class="offer__price_sum">1355</strong>
+										<sup class="offer__price_currence">руб.</sup>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+			<article class="offer ll" id="10">
+				<div class="offer__wrapper">
+					<div class="ll__wrap">
+						<div class="ll__gallery">
+							<div class="ll__gallery_viewport">
+								<ul class="ll__gallery_list">
+									<li class="ll__gallery_item"><img src="content/offer_ll_1.jpg" width="447" height="307" alt=""></li>
+									<li class="ll__gallery_item"><img src="content/offer_ll_2.jpg" width="447" height="307" alt=""></li>
+								</ul>
+							</div>
+							<div class="ll__gallery_control">
+								<div class="ll__gallery_control_wrap">
+									<div class="ll__gallery_control_prev"></div>
+									<div class="ll__gallery_control_next"></div>
+								</div>
+							</div>
+						</div>
+						<div class="offer__brief_desc">
+							<div class="offer__price">
+								<div class="offer__price_new">
+									<strong class="offer__price_sum">935</strong>
+									<sup class="offer__price_currence">руб.</sup>
+								</div>
+								<div class="offer__price_old">
+									<strong class="offer__price_sum">1355</strong>
+									<sup class="offer__price_currence">руб.</sup>
+								</div>
+							</div>
+							<hgroup class="offer__header">
+								<h1 class="offer__header_title">Брозовый загар в солярии за пол</h1>	
+							</hgroup>
+							<div class="offer__brief_desc_body">Удивите своих друзей на новый год, станьте супермэном! Еще несколько строк для трех строк чтоб был в них толк, в не просто переполк. Всего три строки может быть.</div>
+						</div>
+					</div>
+				</div>
+			</article>
+			<article class="offer ss" id="11">
+				<div class="offer__wrapper">
+					<div class="offer__wrap">
+						<div class="offer__brief">
+							<div class="offer__brief_wrap">
+								<div class="offer__brief_pic">
+									<img src="content/offer_ss_2.jpg" width="208" height="141" alt="">
+								</div>
+								<div class="offer__brief_desc">
+									<div class="offer__price">
+										<div class="offer__price_new">
+											<strong class="offer__price_sum">935</strong>
+											<sup class="offer__price_currence">руб.</sup>
+										</div>
+										<div class="offer__price_old">
+											<strong class="offer__price_sum">1355</strong>
+											<sup class="offer__price_currence">руб.</sup>
+										</div>
+									</div>
+									<h1 class="offer__header_title">Брозовый загар в солярии за пол</h1>
+								</div>
+							</div>
+						</div>
+						<div class="offer__full">
+							<div class="offer__full_wrap">
+								<header class="offer__full_header">
+									<div class="offer__full_pic">
+										<img src="content/offer_thumb.jpg" width="42" height="42" alt="">
+									</div>
+									<h1 class="offer__header_title">Брозовый загар в солярии за полцены</h1>
+								</header>
+								<div class="offer__full_desc">
+									Удивите своих друзей на новый год, станьте супермэном! Еще несколько строк для трех строк чтоб был в них толк, в не просто переполк. Всего три строки ...
+								</div>
+								<div class="offer__price">
+									<div class="offer__price_new">
+										<strong class="offer__price_sum">935</strong>
+										<sup class="offer__price_currence">руб.</sup>
+									</div>
+									<div class="offer__price_old">
+										<strong class="offer__price_sum">1355</strong>
+										<sup class="offer__price_currence">руб.</sup>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+			<article class="offer ss" id="12">
+				<div class="offer__wrapper">
+					<div class="offer__wrap">
+						<div class="offer__brief">
+							<div class="offer__brief_wrap">
+								<div class="offer__brief_pic">
+									<img src="content/offer_ss_3.jpg" width="208" height="141" alt="">
+								</div>
+								<div class="offer__brief_desc">
+									<div class="offer__price">
+										<div class="offer__price_new">
+											<strong class="offer__price_sum">935</strong>
+											<sup class="offer__price_currence">руб.</sup>
+										</div>
+										<div class="offer__price_old">
+											<strong class="offer__price_sum">1355</strong>
+											<sup class="offer__price_currence">руб.</sup>
+										</div>
+									</div>
+									<h1 class="offer__header_title">Брозовый загар в солярии за пол</h1>
+								</div>
+							</div>
+						</div>
+						<div class="offer__full">
+							<div class="offer__full_wrap">
+								<header class="offer__full_header">
+									<div class="offer__full_pic">
+										<img src="content/offer_thumb.jpg" width="42" height="42" alt="">
+									</div>
+									<h1 class="offer__header_title">Брозовый загар в солярии за полцены</h1>
+								</header>
+								<div class="offer__full_desc">
+									Удивите своих друзей на новый год, станьте супермэном! Еще несколько строк для трех строк чтоб был в них толк, в не просто переполк. Всего три строки ...
+								</div>
+								<div class="offer__price">
+									<div class="offer__price_new">
+										<strong class="offer__price_sum">935</strong>
+										<sup class="offer__price_currence">руб.</sup>
+									</div>
+									<div class="offer__price_old">
+										<strong class="offer__price_sum">1355</strong>
+										<sup class="offer__price_currence">руб.</sup>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+		</div>
+	</div>
+</div>
+
+<div id="overlay"></div>
+
+<div class="popup card" id="card">
+	<header class="popup__header">
+		<div class="popup__close"></div>
+		<h1 class="popup__header_title">Обучение аргентинскому танго для двоих. <span class="sale">Скидка 51%</span></h1>
+		<dl class="popup__header_params">
+			<dt class="popup__header_param">До конца акции:</dt>
+			<dd class="popup__header_val">2 часа</dd>
+			<dt class="popup__header_param">Уже получили:</dt>
+			<dd class="popup__header_val">1700 чел.</dd>
+		</dl>
+	</header>
+	<div class="popup__body offercard">
+		<nav class="offercard__nav">
+			<div class="offercard__like">
+				<span class="like"><span class="like__icon">like</span></span>
+				<input type="checkbox" class="checkbox" name="agreement" id="agreement">
+				<label for="agreement">я ознакомился с условиями</label>
+			</div>
+			<ul class="offercard__nav_list">
+				<li class="offercard__nav_item current">
+					<span class="js__link">Описание</span>
+				</li>
+				<li class="offercard__nav_item">
+					<span class="js__link">Условия</span>
+				</li>
+			</ul>
+		</nav>
+		<div class="offercard__pages">
+			<article class="offercard__pages_item current">
+				<div class="offerdesc">
+					<div class="offerdesc__description scrollpane">
+						<div class="offerdesc__description_brief">
+							<p>Ужин для одного или двоих в клубе «Авиатор» на Таганке и полет на авиатренажере боевого истребителя СУ-27. Выполнение фигур высшего пилотажа, разбор полета, сувенир-сертификат «Летчика- курсанта», дегустация летного пайка и многое другое.</p>
+						</div>
+						<div class="offerdesc__description_full">
+							<p>Поужинать или полетать? Клуб «Авиатор» на Таганке — необычное место для отдыха, расположенное в центре Москвы. Его интерьер удивителен: «Авиатор» совмещен с Музеем авиации (что вполне логично) — а еще здесь находится единственный в ... Его интерьер удивителен: «Авиатор» совмещен с Музеем авиации (что вполне логично) — а еще здесь находится единственный в ...</p>  
+						</div>
+						<div class="offerdesc__description_price">
+							<div class="offer__price">
+								<div class="offer__price_new">
+									<strong class="offer__price_sum">935</strong>
+									<sup class="offer__price_currence">руб.</sup>
+								</div>
+								<div class="offer__price_old">
+									<strong class="offer__price_sum">1355</strong>
+									<sup class="offer__price_currence">руб.</sup>
+								</div>
+							</div>
+						</div>
+						<ul class="offerdesc__contacts">
+							<li class="offerdesc__contacts_item address">
+								<div class="offerdesc__contacts_icon"></div>
+								Ул. Бауманская, д. 58/25, стр. 6, метро Октябрьское
+							</li>
+							<li class="offerdesc__contacts_item phone">
+								<div class="offerdesc__contacts_icon"></div>
+								+7 (495) 568-16-16,<br> +7 (925) 727-40-85 (бронь столика)
+							</li>
+							<li class="offerdesc__contacts_item www">
+								<div class="offerdesc__contacts_icon"></div>
+								<a href="#" class="offerdesc__contacts_link">wasaby.ru</a>
+							</li>
+						</ul>
+					</div>
+					<div class="offerdesc__gallery">
+						<div class="gallery">
+							<div class="gallery__viewport">
+								<ul class="gallery__list">
+									<li class="gallery__item">
+										<img src="" alt="">
+									</li>
+									<li class="gallery__item">
+										<img src="" alt="">
+									</li>
+								</ul>
+							</div>
+							<nav class="gallery__nav">
+								<ul class="gallery__thumbs">
+									<li class="gallery__thumbs_item current">
+										<img src="" alt="">
+									</li>
+									<li class="gallery__thumbs_item">
+										<img src="" alt="">
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</article>
+			<article class="offercard__pages_item">
+				<div class="license scrollpane">
+					<div class="license__body usercontent">
+						<h2>Условия использования сервиса Яндекс.Телепрограмма</h2>
+						<ul>
+							<li>
+								<h3>Общие положения</h3>
+								<ul>
+									<li>ООО «ЯНДЕКС» (далее — «Яндекс») предлагает пользователю сети Интернет (далее — Пользователь) — использовать сервис Яндекс.Телепрограмма, доступный по адресу: <a href="#">http://tv.yandex.ru/</a> (далее — «Сервис»).</li>
+									<li>Настоящие Условия представляют собой дополнение к Пользовательскому соглашению сервисов Яндекса относительно порядка использования Сервиса. Во всем, что не предусмотрено настоящими Условиями, отношения между Яндексом и Пользователем в связи с использованием Сервиса регулируются Пользовательским соглашением сервисов Яндекса (<a href="#">http://legal.yandex.ru/rules/</a>), а также Лицензией на использование поисковой системы Яндекса (<a href="#">http://legal.yandex.ru/termsofuse/</a>), Политикой конфиденциальности (<a href="#">http://legal.yandex.ru/confidential/</a>).</li>
+									<li>Начиная использовать Сервис/его отдельные функции, Пользователь считается принявшим настоящие Условия, а также условия всех указанных выше документов, в полном объеме, без всяких оговорок и исключений. В случае несогласия Пользователя с какими-либо из положений указанных документов, Пользователь не вправе использовать Сервис.</li>
+									<li>Настоящие Условия могут быть изменены Яндексом без какого-либо специального уведомления, новая редакция Условий вступает в силу с момента ее размещения в сети Интернет по указанному в настоящем абзаце адресу, если иное не предусмотрено новой редакцией Условий. Действующая редакция Условий всегда находится на странице по адресу: <a href="#">http://legal.yandex.ru/tv_termsofuse/.</a></li>
+									<li>В случае если Яндексом были внесены какие-либо изменения в настоящие Условия, в порядке, предусмотренном п. 1.4. настоящих Условий, с которыми Пользователь не согласен, он обязан прекратить использование Сервиса.</li>
+									<li>Сервис предлагает Пользователю возможность бесплатного доступа к расписанию телепрограмм различных телеканалов. Все существующие на данный момент функции Сервиса, а также любое развитие их и/или добавление новых является предметом настоящих Условий.</li>
+								</ul>
+							</li>
+							<li>
+								<h3>Использования Сервиса. Отдельные функции Сервиса</h3>
+								<ul>
+									<li>ООО «ЯНДЕКС» (далее — «Яндекс») предлагает пользователю сети Интернет (далее — Пользователь) — использовать сервис Яндекс.Телепрограмма, доступный по адресу: <a href="#">http://tv.yandex.ru/</a> (далее — «Сервис»).</li>
+									<li>Настоящие Условия представляют собой дополнение к Пользовательскому соглашению сервисов Яндекса относительно порядка использования Сервиса. Во всем, что не предусмотрено настоящими Условиями, отношения между Яндексом и Пользователем в связи с использованием Сервиса регулируются Пользовательским соглашением сервисов Яндекса (<a href="#">http://legal.yandex.ru/rules/</a>), а также Лицензией на использование поисковой системы Яндекса (<a href="#">http://legal.yandex.ru/termsofuse/</a>), Политикой конфиденциальности (<a href="#">http://legal.yandex.ru/confidential/</a>).</li>
+									<li>Начиная использовать Сервис/его отдельные функции, Пользователь считается принявшим настоящие Условия, а также условия всех указанных выше документов, в полном объеме, без всяких оговорок и исключений. В случае несогласия Пользователя с какими-либо из положений указанных документов, Пользователь не вправе использовать Сервис.</li>
+									<li>Настоящие Условия могут быть изменены Яндексом без какого-либо специального уведомления, новая редакция Условий вступает в силу с момента ее размещения в сети Интернет по указанному в настоящем абзаце адресу, если иное не предусмотрено новой редакцией Условий. Действующая редакция Условий всегда находится на странице по адресу: <a href="#">http://legal.yandex.ru/tv_termsofuse/.</a></li>
+									<li>В случае если Яндексом были внесены какие-либо изменения в настоящие Условия, в порядке, предусмотренном п. 1.4. настоящих Условий, с которыми Пользователь не согласен, он обязан прекратить использование Сервиса.</li>
+									<li>Сервис предлагает Пользователю возможность бесплатного доступа к расписанию телепрограмм различных телеканалов. Все существующие на данный момент функции Сервиса, а также любое развитие их и/или добавление новых является предметом настоящих Условий.</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="agreement">
+					<form action="/" method="post">
+						<input type="checkbox" class="checkbox" name="agreement" id="agreement">
+						<label for="agreement">я ознакомился с условиями</label>
+					</form>
+				</div>
+			</article>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

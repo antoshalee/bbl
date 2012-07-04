@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'ProximaNovaRgBold';
+    src: url('../fonts/proximanova-boldwebfont.eot');
+    src: url('../fonts/proximanova-boldwebfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proximanova-boldwebfont.woff') format('woff'),
+         url('../fonts/proximanova-boldwebfont.ttf') format('truetype'),
+         url('../fonts/proximanova-boldwebfont.svg#ProximaNovaRgBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
