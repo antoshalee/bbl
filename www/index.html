@@ -26,7 +26,68 @@
 		</ul>
 		<div class="bar">
 			<div class="cityselect">
-				<div class="cityselect__current">Москва</div>
+				<div class="cityselect__current js_dropdownpopup" data-rel="city">Москва</div>
+				<div class="dropdownpopup city" id="city">
+					<header class="popup__header">
+						<div class="popup__close"></div>
+						<h1 class="popup__header_title">Ваш город <span class="sale">Москва</span>?</h1>
+					</header>
+					<div class="popup__body">
+						<ul class="cities">
+							<li class="cities__item current">
+								<a href="#" class="cities__link">Москва</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Санкт-Петербург</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Альметьевск</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Архангельск</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Астрахань</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Барнаул</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Казань</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Калининград</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Калуга</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Кемерово</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Киров</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Кострома</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Омск</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Орел</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Оренбург</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Пенза</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Петропавловск-Камчатский</a>
+							</li>
+						</ul>
+					</div>
+				</div>
 			</div>
 			<div class="userbar opened">
 				<div class="userbar__userpic">
@@ -62,7 +123,7 @@
 			<ul class="start__list">
 				<li class="start__item">
 					<div class="specoffer">
-						<img src="content/specoffer.jpg" width="599" height="222" alt="">
+						<img src="content/specoffer.jpg" width="900" height="500" alt="">
 					</div>
 				</li>
 				<li class="start__item">
@@ -800,7 +861,7 @@
 	</div>
 </div>
 
-<div id="overlay"></div>
+<div id="overlay" style="display:block"></div>
 
 <div class="popup card" id="card">
 	<header class="popup__header">
@@ -930,6 +991,30 @@
 				</div>
 			</article>
 		</div>
+	</div>
+</div>
+
+<div class="popup login" id="login" style="display:block">
+	<header class="popup__header">
+		<div class="popup__close"></div>
+		<hgroup class="login__welcome">
+			<h1 class="login__welcome_header">Добро пожаловать!</h1>
+			<h2 class="login__welcome_subheader">Войдите и начните получать скидки</h2>
+		</hgroup>
+	</header>
+	<div class="popup__body">
+		<ul class="sociallogin">
+			<li class="sociallogin__item">
+				<a href="#"><img src="i/login/fb.png" width="140" height="40" alt="" class="sociallogin__btn"></a>
+			</li>
+			<li class="sociallogin__item">
+				<a href="#"><img src="i/login/vk.png" width="140" height="40" alt="" class="sociallogin__btn"></a>
+			</li>
+			<li class="sociallogin__item">
+				<a href="#"><img src="i/login/tw.png" width="140" height="40" alt="" class="sociallogin__btn"></a>
+			</li>
+		</ul>
+		<div class="login__skip"><span class="popup__closelink">Пропустить</span></div>
 	</div>
 </div>
 

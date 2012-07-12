@@ -232,8 +232,12 @@ function popup__init() {
 		var rel = $(this).attr('data-rel')
 		popup__show(rel)
 	})
+	$('.js_dropdownpopup').bind('click',function(){
+		var rel = $(this).attr('data-rel')
+		dropdownpopup__show(rel)
+	})
 	// Close popup
-	$('#overlay, .popup__close').bind('click',function(){
+	$('#overlay, .popup__close, .popup__closelink').bind('click',function(){
 		popup__hide()
 	})
 }
@@ -249,9 +253,18 @@ function popup__show(rel) {
 	if ( $('.scrollpane').size() ) $('.scrollpane').jScrollPane()
 	if ( $('.offercard__nav').size ) tabs__init()
 }
+function dropdownpopup__show(rel) {
+	// Hide old popup
+	popup__hide()
+
+	$('#'+rel)
+		.css({'opacity':0,'display':'block'})
+		.stop()
+		.animate({'opacity':1},300)
+}
 
 function popup__hide() {
-	$('#overlay, .popup').hide();
+	$('#overlay, .popup, .dropdownpopup').hide();
 }
 
 function tabs__init() {
