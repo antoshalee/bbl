@@ -4,6 +4,7 @@ $(document).ready(function(){
 	h = $(window).height()
 	min_indent = 30
 	layout__init(min_indent)
+	position = 0
 
 	// Start
 	$('.start__tostart, .search').hide()
@@ -78,7 +79,7 @@ function layout__init(a) {
 	var wrap = ( Math.ceil( (w-2*a)/240 ) -1 )*240
 	var half = wrap/2
 	$('.wrap').css({'width':wrap+'px'})
-	$('.start__wrap').css({'margin':'0 0 0 -'+half+'px'})
+	$('.start__control').css({'margin':'0 0 0 -'+half+'px', 'width':wrap+'px'})
 
 	// Scroll in menu
 	var menuHeight = h - 220
@@ -101,10 +102,10 @@ function start__init() {
 
 function start__slider() {
 	// Init
+	var step = $('.start__list').width()
 	if ( $('.start__control_paging').html() == '' ) {
 		var current = 0
 		var bullets = ''
-		var step = $('.start__list').width()
 		var id = 0
 		$('.start__item').each(function(){
 			bullets += '<li class="start__control_paging_item" data-rel="'+id+'"></li>'
@@ -112,6 +113,7 @@ function start__slider() {
 		})
 		var count = id - 1
 		$('.start__control_paging').append(bullets)
+		go(0)
 	}
 
 	// Handlers
@@ -130,7 +132,6 @@ function start__slider() {
 	})
 
 	function go(num) {
-		console.log(num)
 		var indent = -1 * step * num
 		$('.start__list').stop().animate({'left':indent+'px'},700)
 		$('.start__control_paging_item').removeClass('active')
@@ -265,6 +266,7 @@ function dropdownpopup__show(rel) {
 
 function popup__hide() {
 	$('#overlay, .popup, .dropdownpopup').hide();
+	console.log(close);
 }
 
 function tabs__init() {
@@ -337,7 +339,7 @@ function ajax__offer(id) {
 	console.log('Аякс вежливо просит показать всплывающее окно с акцией под номером '+id)
 
 	// BEGIN TEMPORARY
-	$('.popup').attr('id', 'offer-'+id)
+	$('.popup.card').attr('id', 'offer-'+id)
 	// END TEMPORARY
 
 	return true

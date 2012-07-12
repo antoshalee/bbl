@@ -28,10 +28,10 @@
 			<div class="cityselect">
 				<div class="cityselect__current js_dropdownpopup" data-rel="city">Москва</div>
 				<div class="dropdownpopup city" id="city">
-					<header class="popup__header">
+					<div class="popup__header">
 						<div class="popup__close"></div>
 						<h1 class="popup__header_title">Ваш город <span class="sale">Москва</span>?</h1>
-					</header>
+					</div>
 					<div class="popup__body">
 						<ul class="cities">
 							<li class="cities__item current">
@@ -109,7 +109,7 @@
 </header>
 
 <div class="start" id="start">
-	<div class="start__wrap wrap">
+	<div class="start__wrap">
 		<div class="start__control">
 			<div class="wrap">
 				<div class="start__control_arrows">
@@ -128,12 +128,19 @@
 				</li>
 				<li class="start__item">
 					<div class="specoffer">
-						<img src="content/specoffer.jpg" width="599" height="222" alt="">
+						<img src="content/specoffer.jpg" width="900" height="500" alt="">
 					</div>
 				</li>
-				<li class="start__item">
+				<li class="start__item" style="background: #fdd803;
+background: -moz-linear-gradient(45deg,  #fdd803 0%, #078385 100%);
+background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#fdd803), color-stop(100%,#078385));
+background: -webkit-linear-gradient(45deg,  #fdd803 0%,#078385 100%);
+background: -o-linear-gradient(45deg,  #fdd803 0%,#078385 100%);
+background: -ms-linear-gradient(45deg,  #fdd803 0%,#078385 100%);
+background: linear-gradient(45deg,  #fdd803 0%,#078385 100%);
+">
 					<div class="specoffer">
-						<img src="content/specoffer.jpg" width="599" height="222" alt="">
+						<img src="content/specoffer.png" width="900" height="500" alt="">
 					</div>
 				</li>
 			</ul>
@@ -861,7 +868,7 @@
 	</div>
 </div>
 
-<div id="overlay" style="display:block"></div>
+<div id="overlay"></div>
 
 <div class="popup card" id="card">
 	<header class="popup__header">
@@ -932,20 +939,20 @@
 							<div class="gallery__viewport">
 								<ul class="gallery__list">
 									<li class="gallery__item">
-										<img src="" alt="">
+										<img src="#" alt="">
 									</li>
 									<li class="gallery__item">
-										<img src="" alt="">
+										<img src="#" alt="">
 									</li>
 								</ul>
 							</div>
 							<nav class="gallery__nav">
 								<ul class="gallery__thumbs">
 									<li class="gallery__thumbs_item current">
-										<img src="" alt="">
+										<img src="#" alt="">
 									</li>
 									<li class="gallery__thumbs_item">
-										<img src="" alt="">
+										<img src="#" alt="">
 									</li>
 								</ul>
 							</nav>
@@ -994,7 +1001,7 @@
 	</div>
 </div>
 
-<div class="popup login" id="login" style="display:block">
+<div class="popup login" id="login">
 	<header class="popup__header">
 		<div class="popup__close"></div>
 		<hgroup class="login__welcome">
