@@ -6,30 +6,33 @@ $(document).ready(function(){
 	layout__init(min_indent)
 	position = 0
 
-	// Start
-	$('.start__tostart, .search').hide()
-	$('.start__tooffers').show()
-	$('#offers').hide()
-	start__init()
+	handlers()
 	
 	// Offers
 	offers__init()
 	if ( $('.popup').size() ) popup__init()
 	if ( $('.checkbox').size() ) checkbox__init()
 
-	// One page app
-	url = ''
-	handlers()
-	var hash = location.hash
+	if ( $('body').attr('id')=='mainpage' ) {
+		// Start
+		$('.start__tostart, .search').hide()
+		$('.start__tooffers').show()
+		$('#offers').hide()
+		start__init()
 
-	if ( hash == '' ) {
-		hash = '#!/start'
-		location.hash = hash
-	} else {
-		url = hash.slice(3).split('/')
-		hash__parse()
+		// One page app
+		url = ''
+		handlers()
+		var hash = location.hash
+
+		if ( hash == '' ) {
+			hash = '#!/start'
+			location.hash = hash
+		} else {
+			url = hash.slice(3).split('/')
+			hash__parse()
+		}
 	}
-
 })
 
 function handlers() {
