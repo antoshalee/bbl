@@ -1,0 +1,443 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Buy by like</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+	<script src="js/jquery.masonry.min.js"></script>
+	<script src="js/jquery.slideit.js"></script>
+	<script src="js/jquery.jscrollpane.js"></script>
+	<script src="js/jquery.mousewheel.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+
+<div id="flag"></div>
+
+<header role="banner" id="header">
+	<div class="wrap">
+		<a href="/"><img src="i/logo.png" width="128" height="27" alt="" class="logo"></a>
+		<ul class="sitenav">
+			<li class="sitenav__item"><a href="/" class="sitenav__link">Старт</a></li>
+			<li class="sitenav__item"><a href="/offers" class="sitenav__link">Акции</a></li>
+			<li class="sitenav__item"><a href="/about" class="sitenav__link">О проекте</a></li>
+			<li class="sitenav__item"><a href="/business" class="sitenav__link">Бизнесу</a></li>
+		</ul>
+		<div class="bar">
+			<div class="cityselect">
+				<div class="cityselect__current js_dropdownpopup" data-rel="city">Москва</div>
+				<div class="dropdownpopup city" id="city">
+					<div class="popup__header">
+						<div class="popup__close"></div>
+						<h1 class="popup__header_title">Ваш город <span class="sale">Москва</span>?</h1>
+					</div>
+					<div class="popup__body">
+						<ul class="cities">
+							<li class="cities__item current">
+								<a href="#" class="cities__link">Москва</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Санкт-Петербург</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Альметьевск</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Архангельск</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Астрахань</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Барнаул</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Казань</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Калининград</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Калуга</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Кемерово</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Киров</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Кострома</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Омск</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Орел</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Оренбург</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Пенза</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Петропавловск-Камчатский</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="userbar opened">
+				<div class="userbar__userpic">
+					<img src="content/userpic.jpg" width="22" height="22" class="userbar__userpic_photo" alt="">
+					<div class="userbar__menu">
+						<ul class="userbar__menu_list">
+							<li class="userbar__menu_item"><a href="#" class="userbar__link">Мои купоны</a></li>
+							<li class="userbar__menu_item"><a href="#" class="userbar__link">Настройки</a></li>
+						</ul>
+						<div class="userbar__logout"><a href="#" class="userbar__link">Выйти</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="basket">
+				<div class="basket__count">3</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div id="wrapper">
+	<div id="wrap">
+		<header class="pageheader wrap">
+			<div class="search">
+				<form action="/" method="post">
+					<input type="text" name="q" class="search__input" placeholder="Поиск по акциям">
+					<button type="submit" class="search__submit"><img src="i/icons/icons.gif" width="96" height="32" class="search__submit_icon" alt=""></button>
+				</form>
+			</div>
+			<h1 class="pageheader__title">Мои купоны</h1>
+			<nav class="pageheader__nav">
+				<div class="settings">
+					<a href="#"><span class="settings__icon"></span>Настройки</a>
+				</div>
+			</nav>
+		</header>
+		<div role="main" class="content wrap" id="offers">
+			<aside class="sidebar" role="complementary">
+				<form action="/" method="get" class="filter">
+					<ul class="filter__sections">
+						<li class="filter__sections_item">
+							<input type="radio" name="section" id="filter_section_popular" class="filter__radio" value="popular" checked>
+							<div class="filter__field">
+								<label class="filter__label" for="filter_section_popular">Активные</label>
+							</div>
+						</li>
+						<li class="filter__sections_item">
+							<input type="radio" name="section" id="filter_section_recommended" value="recommeded" class="filter__radio">
+							<div class="filter__field">
+								<label class="filter__label" for="filter_section_recommended">Прошедшие</label>
+							</div>
+						</li>
+					</ul>
+					<div class="printall">
+						<a href="#"><span class="printall__icon"></span>Распечатать все</a>
+					</div>
+				</form>
+			</aside>
+			<div class="main">
+				<div class="offers">
+					<article class="coupon ss">
+						<div class="coupon__wrapper">
+							<div class="coupon__wrap">
+								<div class="coupon__main">
+									<div class="coupon__main_wrap">
+										<header class="offer__full_header">
+											<div class="offer__full_pic">
+												<img src="content/offer_thumb.jpg" width="42" height="42" alt="">
+											</div>
+											<h1 class="offer__header_title">Брозовый загар в солярии за полцены</h1>
+										</header>
+										<div class="coupon__body">
+											<code class="coupon__code">Код: 8D3W399</code>
+										</div>
+										<div class="coupon__footer">
+											<div class="coupon__remains">
+												До конца акции: <strong class="coupon__remains_time">7 часов</strong>
+											</div>
+											<div class="coupon__actions">
+												<div class="coupon__actions_print">
+													<a href="#" class="coupon__actions_link"><span class="coupon__actions_icon"></span>Распечатать</a>
+												</div>
+												<div class="coupon__actions_sms">
+													<a href="#" class="coupon__actions_link"><span class="coupon__actions_icon"></span>Смс</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article class="coupon ss">
+						<div class="coupon__wrapper">
+							<div class="coupon__wrap">
+								<div class="coupon__main">
+									<div class="coupon__main_wrap">
+										<header class="offer__full_header">
+											<div class="offer__full_pic">
+												<img src="content/offer_thumb.jpg" width="42" height="42" alt="">
+											</div>
+											<h1 class="offer__header_title">Брозовый загар в солярии за полцены</h1>
+										</header>
+										<div class="coupon__body">
+											<code class="coupon__code">Код: 8D3W399</code>
+										</div>
+										<div class="coupon__footer">
+											<div class="coupon__remains">
+												До конца акции: <strong class="coupon__remains_time">7 часов</strong>
+											</div>
+											<div class="coupon__actions">
+												<div class="coupon__actions_print">
+													<a href="#" class="coupon__actions_link"><span class="coupon__actions_icon"></span>Распечатать</a>
+												</div>
+												<div class="coupon__actions_sms">
+													<a href="#" class="coupon__actions_link"><span class="coupon__actions_icon"></span>Смс</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article class="coupon ss">
+						<div class="coupon__wrapper">
+							<div class="coupon__wrap">
+								<div class="coupon__main">
+									<div class="coupon__main_wrap">
+										<header class="offer__full_header">
+											<div class="offer__full_pic">
+												<img src="content/offer_thumb.jpg" width="42" height="42" alt="">
+											</div>
+											<h1 class="offer__header_title">Брозовый загар в солярии за полцены</h1>
+										</header>
+										<div class="coupon__body">
+											<code class="coupon__code">Код: 8D3W399</code>
+										</div>
+										<div class="coupon__footer">
+											<div class="coupon__remains">
+												До конца акции: <strong class="coupon__remains_time">7 часов</strong>
+											</div>
+											<div class="coupon__actions">
+												<div class="coupon__actions_print">
+													<a href="#" class="coupon__actions_link"><span class="coupon__actions_icon"></span>Распечатать</a>
+												</div>
+												<div class="coupon__actions_sms">
+													<a href="#" class="coupon__actions_link"><span class="coupon__actions_icon"></span>Смс</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article class="coupon ss">
+						<div class="coupon__wrapper">
+							<div class="coupon__wrap">
+								<div class="coupon__main">
+									<div class="coupon__main_wrap">
+										<header class="offer__full_header">
+											<div class="offer__full_pic">
+												<img src="content/offer_thumb.jpg" width="42" height="42" alt="">
+											</div>
+											<h1 class="offer__header_title">Брозовый загар в солярии за полцены</h1>
+										</header>
+										<div class="coupon__body">
+											<code class="coupon__code">Код: 8D3W399</code>
+										</div>
+										<div class="coupon__footer">
+											<div class="coupon__remains">
+												До конца акции: <strong class="coupon__remains_time">7 часов</strong>
+											</div>
+											<div class="coupon__actions">
+												<div class="coupon__actions_print">
+													<a href="#" class="coupon__actions_link"><span class="coupon__actions_icon"></span>Распечатать</a>
+												</div>
+												<div class="coupon__actions_sms">
+													<a href="#" class="coupon__actions_link"><span class="coupon__actions_icon"></span>Смс</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article class="coupon ss">
+						<div class="coupon__wrapper">
+							<div class="coupon__wrap">
+								<div class="coupon__main">
+									<div class="coupon__main_wrap">
+										<header class="offer__full_header">
+											<div class="offer__full_pic">
+												<img src="content/offer_thumb.jpg" width="42" height="42" alt="">
+											</div>
+											<h1 class="offer__header_title">Брозовый загар в солярии за полцены</h1>
+										</header>
+										<div class="coupon__body">
+											<code class="coupon__code">Код: 8D3W399</code>
+										</div>
+										<div class="coupon__footer">
+											<div class="coupon__remains">
+												До конца акции: <strong class="coupon__remains_time">7 часов</strong>
+											</div>
+											<div class="coupon__actions">
+												<div class="coupon__actions_print">
+													<a href="#" class="coupon__actions_link"><span class="coupon__actions_icon"></span>Распечатать</a>
+												</div>
+												<div class="coupon__actions_sms">
+													<a href="#" class="coupon__actions_link"><span class="coupon__actions_icon"></span>Смс</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article class="coupon ss">
+						<div class="coupon__wrapper">
+							<div class="coupon__wrap">
+								<div class="coupon__main">
+									<div class="coupon__main_wrap">
+										<header class="offer__full_header">
+											<div class="offer__full_pic">
+												<img src="content/offer_thumb.jpg" width="42" height="42" alt="">
+											</div>
+											<h1 class="offer__header_title">Брозовый загар в солярии за полцены</h1>
+										</header>
+										<div class="coupon__body">
+											<code class="coupon__code">Код: 8D3W399</code>
+										</div>
+										<div class="coupon__footer">
+											<div class="coupon__remains">
+												До конца акции: <strong class="coupon__remains_time">7 часов</strong>
+											</div>
+											<div class="coupon__actions">
+												<div class="coupon__actions_print">
+													<a href="#" class="coupon__actions_link"><span class="coupon__actions_icon"></span>Распечатать</a>
+												</div>
+												<div class="coupon__actions_sms">
+													<a href="#" class="coupon__actions_link"><span class="coupon__actions_icon"></span>Смс</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article class="coupon ss">
+						<div class="coupon__wrapper">
+							<div class="coupon__wrap">
+								<div class="coupon__main">
+									<div class="coupon__main_wrap">
+										<header class="offer__full_header">
+											<div class="offer__full_pic">
+												<img src="content/offer_thumb.jpg" width="42" height="42" alt="">
+											</div>
+											<h1 class="offer__header_title">Брозовый загар в солярии за полцены</h1>
+										</header>
+										<div class="coupon__body">
+											<code class="coupon__code">Код: 8D3W399</code>
+										</div>
+										<div class="coupon__footer">
+											<div class="coupon__remains">
+												До конца акции: <strong class="coupon__remains_time">7 часов</strong>
+											</div>
+											<div class="coupon__actions">
+												<div class="coupon__actions_print">
+													<a href="#" class="coupon__actions_link"><span class="coupon__actions_icon"></span>Распечатать</a>
+												</div>
+												<div class="coupon__actions_sms">
+													<a href="#" class="coupon__actions_link"><span class="coupon__actions_icon"></span>Смс</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<footer id="footer">
+	<div class="wrap">
+		<div class="contacts">
+			<div class="contacts__phone">
+				<div class="contacts__icon phone"></div>
+				Тел.: <span class="phone">8 (495) 640 4950</span>
+			</div>
+			<div class="contacts__mail">
+				<div class="contacts__icon mail"></div>
+				<a href="mailto:mail@buybylike.com" class="contacts__link">mail@buybylike.com</a>
+			</div>
+			<div class="contacts__social">
+				В соцсетях:
+				<ul class="social">
+					<li class="social__item">
+						<a href="#" class="social__link"><img src="i/icons/social.gif" width="64" height="32" alt="" class="social__icon fb"></a>
+					</li>
+					<li class="social__item">
+						<a href="#" class="social__link"><img src="i/icons/social.gif" width="64" height="32" alt="" class="social__icon tw"></a>
+					</li>
+					<li class="social__item">
+						<a href="#" class="social__link"><img src="i/icons/social.gif" width="64" height="32" alt="" class="social__icon vk"></a>
+					</li>
+					<li class="social__item">
+						<a href="#" class="social__link"><img src="i/icons/social.gif" width="64" height="32" alt="" class="social__icon od"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="start__tostart">
+			<div class="start__tostart_icon"></div>
+			<a href="/" class="start__tostart_link">На главную</a>
+		</div>
+	</div>
+</footer>
+
+<div id="overlay"></div>
+
+<div class="popup login" id="login">
+	<header class="popup__header">
+		<div class="popup__close"></div>
+		<hgroup class="login__welcome">
+			<h1 class="login__welcome_header">Добро пожаловать!</h1>
+			<h2 class="login__welcome_subheader">Войдите и начните получать скидки</h2>
+		</hgroup>
+	</header>
+	<div class="popup__body">
+		<ul class="sociallogin">
+			<li class="sociallogin__item">
+				<a href="#"><img src="i/login/fb.png" width="140" height="40" alt="" class="sociallogin__btn"></a>
+			</li>
+			<li class="sociallogin__item">
+				<a href="#"><img src="i/login/vk.png" width="140" height="40" alt="" class="sociallogin__btn"></a>
+			</li>
+			<li class="sociallogin__item">
+				<a href="#"><img src="i/login/tw.png" width="140" height="40" alt="" class="sociallogin__btn"></a>
+			</li>
+		</ul>
+		<div class="login__skip"><span class="popup__closelink">Пропустить</span></div>
+	</div>
+</div>
+
+</body>
+</html>
