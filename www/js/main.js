@@ -7,13 +7,8 @@ $(document).ready(function(){
 	position = 0
 
 	handlers()
-	
-	// Offers
-	offers__init()
-	if ( $('.popup').size() ) popup__init()
-	if ( $('.checkbox').size() ) checkbox__init()
 
-	if ( $('body').attr('id')=='mainpage' ) {
+	if ( $('body').attr('id') == 'mainpage' ) {
 		// Start
 		$('.start__tostart, .search').hide()
 		$('.start__tooffers').show()
@@ -33,6 +28,11 @@ $(document).ready(function(){
 			hash__parse()
 		}
 	}
+
+	// Offers
+	offers__init()
+	if ( $('.popup').size() ) popup__init()
+	if ( $('.checkbox').size() ) checkbox__init()
 })
 
 function handlers() {
@@ -201,12 +201,12 @@ function start__toggle(toOffers) {
 					.css({'opacity':0,})
 					.animate({'opacity':1},300)
 		})
-		$('#offers').stop().slideDown(800, function(){
+		$('#offers').show(); //.slideDown(800, function(){
 			$('.main').masonry({
 				itemSelector : '.offer',
 				columnWidth : 240
 			});
-		})
+		//})
 	} else {
 		$('.start').stop().animate({'height':'100%'},800)
 		$('.start__tostart, .search').stop().animate({'opacity':0},300,function(){
@@ -217,8 +217,9 @@ function start__toggle(toOffers) {
 				.show()
 				.css({'opacity':0,})
 				.animate({'opacity':1},300)
+			$('#offers').slideUp(800);
 		})
-		$('#offers').stop().slideUp(800)
+		 //.stop().slideUp(800)
 	}
 }
 
@@ -347,14 +348,3 @@ function ajax__offer(id) {
 
 	return true
 }
-
-/* 
-
-TO DO
-
-Change hash on close popup
-fix slideIt bug
-Change hash with change form data
-
-
-*/

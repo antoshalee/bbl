@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>Buy by like</title>
 	<link rel="stylesheet" href="css/style.css">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 	<script src="js/jquery.masonry.min.js"></script>
 	<script src="js/jquery.slideit.js"></script>
 	<script src="js/jquery.jscrollpane.js"></script>
@@ -17,7 +17,7 @@
 
 <header role="banner" id="header">
 	<div class="wrap">
-		<a href="/"><img src="i/logo.png" width="128" height="27" alt="" class="logo"></a>
+		<a href="/"><img src="assets/logo.png" width="128" height="27" alt="" class="logo"></a>
 		<ul class="sitenav">
 			<li class="sitenav__item"><a href="/" class="sitenav__link">Старт</a></li>
 			<li class="sitenav__item"><a href="/offers" class="sitenav__link">Акции</a></li>
@@ -114,14 +114,18 @@
 			<div class="search">
 				<form action="/" method="post">
 					<input type="text" name="q" class="search__input" placeholder="Поиск по акциям">
-					<button type="submit" class="search__submit"><img src="i/icons/icons.gif" width="96" height="32" class="search__submit_icon" alt=""></button>
+					<button type="submit" class="search__submit"><img src="assets/icons/func.png" width="80" height="32" class="search__submit_icon" alt=""></button>
 				</form>
 			</div>
 			<h1 class="pageheader__title">Мои купоны</h1>
 			<nav class="pageheader__nav">
-				<div class="settings">
-					<a href="#"><span class="settings__icon"></span>Настройки</a>
-				</div>
+				<ul class="pageheader__nav_list">
+					<li class="pageheader__nav_item">
+						<div class="settings">
+							<a href="#"><span class="pageheader__icon settings__icon"></span>Настройки</a>
+						</div>
+					</li>
+				</ul>
 			</nav>
 		</header>
 		<div role="main" class="content wrap" id="offers">
@@ -392,16 +396,16 @@
 				В соцсетях:
 				<ul class="social">
 					<li class="social__item">
-						<a href="#" class="social__link"><img src="i/icons/social.gif" width="64" height="32" alt="" class="social__icon fb"></a>
+						<a href="#" class="social__link"><img src="assets/icons/social.gif" width="64" height="32" alt="" class="social__icon fb"></a>
 					</li>
 					<li class="social__item">
-						<a href="#" class="social__link"><img src="i/icons/social.gif" width="64" height="32" alt="" class="social__icon tw"></a>
+						<a href="#" class="social__link"><img src="assets/icons/social.gif" width="64" height="32" alt="" class="social__icon tw"></a>
 					</li>
 					<li class="social__item">
-						<a href="#" class="social__link"><img src="i/icons/social.gif" width="64" height="32" alt="" class="social__icon vk"></a>
+						<a href="#" class="social__link"><img src="assets/icons/social.gif" width="64" height="32" alt="" class="social__icon vk"></a>
 					</li>
 					<li class="social__item">
-						<a href="#" class="social__link"><img src="i/icons/social.gif" width="64" height="32" alt="" class="social__icon od"></a>
+						<a href="#" class="social__link"><img src="assets/icons/social.gif" width="64" height="32" alt="" class="social__icon od"></a>
 					</li>
 				</ul>
 			</div>
@@ -426,13 +430,13 @@
 	<div class="popup__body">
 		<ul class="sociallogin">
 			<li class="sociallogin__item">
-				<a href="#"><img src="i/login/fb.png" width="140" height="40" alt="" class="sociallogin__btn"></a>
+				<a href="#"><img src="assets/login/fb.png" width="140" height="40" alt="" class="sociallogin__btn"></a>
 			</li>
 			<li class="sociallogin__item">
-				<a href="#"><img src="i/login/vk.png" width="140" height="40" alt="" class="sociallogin__btn"></a>
+				<a href="#"><img src="assets/login/vk.png" width="140" height="40" alt="" class="sociallogin__btn"></a>
 			</li>
 			<li class="sociallogin__item">
-				<a href="#"><img src="i/login/tw.png" width="140" height="40" alt="" class="sociallogin__btn"></a>
+				<a href="#"><img src="assets/login/tw.png" width="140" height="40" alt="" class="sociallogin__btn"></a>
 			</li>
 		</ul>
 		<div class="login__skip"><span class="popup__closelink">Пропустить</span></div>

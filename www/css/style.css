@@ -49,6 +49,7 @@ body {
 	z-index:100;
 	}
 #offers {
+	height:auto;
 	position:relative;
 	background:#fff;
 	border:1px solid #e0e5e9;
@@ -171,6 +172,19 @@ body {
 	.cityselect__current:hover {
 		opacity:0.8;
 		}
+
+/* My company */
+.mycompany {
+	display:inline-block;
+	vertical-align:middle;
+	color:#d3c5e2;
+	font:15px/15px 'Calibri', Arial, Helvetica, sans-serif;
+	cursor:pointer;
+	text-shadow:0px 1px 2px #51325e;
+	}
+.mycompany:hover {
+	opacity:0.8;
+	}
 
 /* Userbar */
 .userbar {
@@ -416,7 +430,7 @@ body {
 						margin:-3px 0 0;
 						width:16px;
 						height:16px;
-						background:url('/assets/icons/icons.gif') top left no-repeat;
+						background:url('/assets/icons/icons.png') top left no-repeat;
 						}
 					.start__tostart_link {
 						display:inline-block;
@@ -467,7 +481,7 @@ body {
 			width:16px;
 			height:16px;
 			margin:-3px 0 0;
-			background:url('/assets/icons/icons.gif') no-repeat;
+			background:url('/assets/icons/icons.png') no-repeat;
 			cursor:pointer;
 			}
 		.contacts__icon:hover {
@@ -555,7 +569,7 @@ body {
 		position:absolute;
 		top:50%;
 		left:14px;
-		margin:-6px 0 0 -4px;
+		margin:-7px 0 0 -4px;
 		width:16px;
 		height:16px;
 		padding:0;
@@ -570,7 +584,7 @@ body {
 		.search__submit_icon {
 			position:absolute;
 			top:0;
-			left:-48px;
+			left:-64px;
 			}
 
 /* Offer */
@@ -1293,18 +1307,7 @@ body {
 		height:387px;
 		border:1px solid #a9a7a4;
 		background:#333 url('/assets/loader.gif') center center no-repeat;
-		}
-	.gallery__viewport:after {
-		content:'';
-		position:absolute;
-		display:block;
-		top:0;
-		right:0;
-		bottom:0;
-		left:0;
-		-webkit-box-shadow:inset 0 0 7px 0 rgba(0,0,0,0.2);
-		box-shadow:inset 0 0 7px 0 rgba(0,0,0,0.2);
-		z-index:5;
+		overflow:hidden;
 		}
 		.gallery__list {
 			position:absolute;
@@ -1514,7 +1517,11 @@ body {
 		display:inline-block;
 		vertical-align:baseline;
 		}
-		.pageheader__nav a {
+		.pageheader__nav_item {
+			display:inline-block;
+			vertical-align:baseline;
+			}
+			.pageheader__nav a {
 			font:14px Arial, Helvetica, sans-serif;
 			color:#98a1a4;
 			text-decoration:none;
@@ -1525,10 +1532,12 @@ body {
 			color:#66707e;
 			}
 
-.settings {
-	padding:0 0 0 21px;
+.settings,
+.payment,
+.stats {
+	padding:0 21px;
 	}
-	.settings__icon {
+	.pageheader__icon {
 		display:block;
 		position:relative;
 		left:-21px;
@@ -1536,15 +1545,39 @@ body {
 		margin:0 -21px 0 0;
 		width:16px;
 		height:16px;
-		background:url('/assets/icons/icons.gif') no-repeat;
-		background-position:-80px 0;
+		}
+	.settings__icon {
+		background:url('/assets/icons/func.png') no-repeat;
+		background-position:0 0;
 		}
 	.settings:hover .settings__icon {
-		background-position:-80px -16px;
+		background-position:0 -16px;
+		}
+	.payment__icon {
+		background:url('/assets/icons/func.png') no-repeat;
+		background-position:-16px 0;
+		}
+	.payment:hover .payment__icon {
+		background-position:-16px -16px;
+		}
+	.stocks__icon {
+		background:url('/assets/icons/func.png') no-repeat;
+		background-position:-32px 0;
+		}
+	.stocks:hover .stocks__icon {
+		background-position:-32px -16px;
+		}
+	.stats__icon {
+		background:url('/assets/icons/func.png') no-repeat;
+		background-position:-48px 0;
+		}
+	.stats:hover .stats__icon {
+		background-position:-48px -16px;
 		}
 
-/* Offer */
-.coupon {
+/* Coupons and stocks */
+.coupon,
+.stock {
 	position:relative;
 	display:inline-block;
 	vertical-align:top;
@@ -1554,7 +1587,8 @@ body {
 	width:240px;
 	height:209px;
 	}
-	.coupon__wrapper {
+	.coupon__wrapper,
+	.stock__wrapper {
 		position:absolute;
 		top:-1px;
 		right:-1px;
@@ -1563,18 +1597,21 @@ body {
 		border:1px dashed #e4e6ea;
 		overflow:hidden;
 		}
-	.coupon__wrap {
+	.coupon__wrap,
+	.stock__wrap {
 		position:absolute;
 		top:0;
 		left:0;
 		width:100%;
 		height:100%;
 		}
-		.coupon__main {
+		.coupon__main,
+		.stock__main {
 			position:relative;
 			height:100%;
 			}
-		.coupon:hover .coupon__main {
+		.coupon:hover .coupon__main,
+		.stock:hover .stock__main {
 			background:url('/assets/bg.gif');
 			-webkit-box-shadow:inset 0 0 10px 0 #b6babd;
 			box-shadow:inset 0 0 10px 0 #b6babd;
@@ -1613,6 +1650,19 @@ body {
 				display:block;
 				background:url('/assets/coupon.png') repeat-x;
 				}
+			.stock__main_wrap {
+				position:absolute;
+				top:7px;
+				right:8px;
+				bottom:9px;
+				left:8px;
+				padding:11px 12px;
+				border:1px solid transparent;
+				}
+			.stock:hover .stock__main_wrap {
+				border:1px solid #cdd1d4;
+				background:#fbfbfb;
+				}
 				.coupon__body {
 					padding:22px 0 33px;
 					}
@@ -1622,9 +1672,7 @@ body {
 						text-shadow:0px 1px 1px #ffffff;
 						filter:dropshadow(color=#ffffff, offx=0, offy=1);
 						}
-				.coupon__footer {
-
-					}
+				.coupon__footer {}
 					.coupon__remains {
 						display:block;
 						font:13px Arial, Helvetica, sans-serif;
@@ -1667,25 +1715,104 @@ body {
 								margin:0 -24px 0 0;
 								}
 							.coupon__actions_print .coupon__actions_icon {
-								background:url('/assets/icons/icons.gif') no-repeat;
+								background:url('/assets/icons/icons.png') no-repeat;
 								background-position:-64px 0;
 								}
 							.coupon__actions_print .coupon__actions_icon:hover {
 								background-position:-64px -16px;
 								}
 							.coupon__actions_sms .coupon__actions_icon {
-								background:url('/assets/icons/icons.gif') no-repeat;
+								background:url('/assets/icons/icons.png') no-repeat;
 								background-position:-32px 0;
 								}
 							.coupon__actions_sms .coupon__actions_icon {
-								background:url('/assets/icons/icons.gif') no-repeat;
+								background:url('/assets/icons/icons.png') no-repeat;
 								background-position:-32px -16px;
 								}
+				.stock__desc {
+					display:block;
+					padding:15px 0 0;
+					font:13px/20px Arial, Helvetica, sans-serif;
+					color:#98a1a4;
+					}
+				.stock__func {
+					display:none;
+					margin:4px 0 0;
+					}
+				.stock:hover .stock__desc {
+					display:none;
+					}
+				.stock:hover .stock__func {
+					display:block;
+					}
 
-.printall {
+
+/* Stock parameters */
+.stock__params {
+	font:13px/20px Arial, Helvetica, sans-serif;
+	color:#98a1a4;
+	}
+	.stock__params_item {}
+		.stock__params_param {}
+		.stock__params_value {
+			color:#4f5359;
+			}
+
+
+/* Stock functions */
+.stock__functions {
+	padding:0 0 0 23px;
+	}
+	.stock__functions_item {}
+		.stock__functions_item .icon {
+			width:16px;
+			height:16px;
+			position:relative;
+			top:3px;
+			left:-23px;
+			float:left;
+			margin:0 -23px 0 0;
+			background:url('/assets/icons/icons.png') no-repeat;
+			}
+		.stock__functions_item:hover .icon {
+			background-position-y:-16px;
+			}
+		.stock__functions_item.edit__link .icon {
+			background-position-x:-48px;
+			}
+		.stock__functions_item.close__link .icon {
+			background-position-x:-80px;
+			}
+		.stock__functions_item.stats__link .icon {
+			background-position-x:-96px;
+			}
+		.stock__functions_item.download__link .icon {
+			background-position-x:-112px;
+			}
+		.stock__functions_link {
+			font:13px/25px Arial, Helvetica, sans-serif;
+			color:#98a1a4;
+			text-decoration:none;
+			}
+		.download__link .stock__functions_link {
+			color:#4f5359;
+			}
+		.stock__functions_link:hover {
+			text-decoration:underline;
+			}
+
+
+
+/* Print all */
+.printall,
+.newstock {
 	margin:12px 21px 0 24px;
 	padding:12px 0 0 27px;
 	border-top:1px dashed #ccc;
+	}
+.newstock {
+	padding:12px 0 0;
+	border:0;
 	}
 	.printall a {
 		font:14px Arial, Helvetica, sans-serif;
@@ -1703,10 +1830,11 @@ body {
 			margin:0 -27px 0 0;
 			width:16px;
 			height:16px;
-			background:url('/assets/icons/icons.gif') no-repeat;
+			background:url('/assets/icons/icons.png') no-repeat;
 			background-position:-64px 0;
 			}
 
 .js_hash_link {
 	cursor:pointer;
 	}
+

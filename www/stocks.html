@@ -1,0 +1,664 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Buy by like</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+	<script src="js/jquery.masonry.min.js"></script>
+	<script src="js/jquery.slideit.js"></script>
+	<script src="js/jquery.jscrollpane.js"></script>
+	<script src="js/jquery.mousewheel.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+
+<div id="flag"></div>
+
+<header role="banner" id="header">
+	<div class="wrap">
+		<a href="/"><img src="assets/logo.png" width="128" height="27" alt="" class="logo"></a>
+		<ul class="sitenav">
+			<li class="sitenav__item"><a href="/" class="sitenav__link">Старт</a></li>
+			<li class="sitenav__item"><a href="/offers" class="sitenav__link">Акции</a></li>
+			<li class="sitenav__item"><a href="/about" class="sitenav__link">О проекте</a></li>
+			<li class="sitenav__item"><a href="/business" class="sitenav__link">Бизнесу</a></li>
+		</ul>
+		<div class="bar">
+			<div class="mycompany">Рога и копыта inc.</div>
+			<div class="userbar opened">
+				<div class="userbar__userpic">
+					<img src="content/userpic.jpg" width="22" height="22" class="userbar__userpic_photo" alt="">
+					<div class="userbar__menu">
+						<ul class="userbar__menu_list">
+							<li class="userbar__menu_item"><a href="#" class="userbar__link">Мои акции</a></li>
+							<li class="userbar__menu_item"><a href="#" class="userbar__link">Настройки</a></li>
+						</ul>
+						<div class="userbar__logout"><a href="#" class="userbar__link">Выйти</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="basket">
+				<div class="basket__count">3</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div id="wrapper">
+	<div id="wrap">
+		<header class="pageheader wrap">
+			<div class="search">
+				<form action="/" method="post">
+					<input type="text" name="q" class="search__input" placeholder="Поиск по акциям">
+					<button type="submit" class="search__submit"><img src="assets/icons/func.png" width="80" height="32" class="search__submit_icon" alt=""></button>
+				</form>
+			</div>
+			<h1 class="pageheader__title">Мои акции</h1>
+			<nav class="pageheader__nav">
+				<ul class="pageheader__nav_list">
+					<li class="pageheader__nav_item">
+						<div class="settings">
+							<a href="#"><span class="pageheader__icon settings__icon"></span>Настройки</a>
+						</div>
+					</li>
+					<li class="pageheader__nav_item">
+						<div class="payment">
+							<a href="#"><span class="pageheader__icon payment__icon"></span>Оплата</a>
+						</div>
+					</li>
+					<li class="pageheader__nav_item">
+						<div class="stats">
+							<a href="#"><span class="pageheader__icon stats__icon"></span>Статистика</a>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<div role="main" class="content wrap" id="offers">
+			<aside class="sidebar" role="complementary">
+				<form action="/" method="get" class="filter">
+					<ul class="filter__sections">
+						<li class="filter__sections_item">
+							<input type="radio" name="section" id="filter_section_popular" class="filter__radio" value="popular" checked>
+							<div class="filter__field">
+								<label class="filter__label" for="filter_section_popular">Активные</label>
+							</div>
+						</li>
+						<li class="filter__sections_item">
+							<input type="radio" name="section" id="filter_section_recommended" value="recommeded" class="filter__radio">
+							<div class="filter__field">
+								<label class="filter__label" for="filter_section_recommended">Прошедшие</label>
+							</div>
+						</li>
+					</ul>
+					<div class="newstock">
+						<a href="#" class="btn violet">+ Новая акция</a>
+					</div>
+				</form>
+			</aside>
+			<div class="main">
+				<div class="offers">
+					<article class="stock ss">
+						<div class="stock__wrapper">
+							<div class="stock__wrap">
+								<div class="stock__main">
+									<div class="stock__main_wrap">
+										<header class="offer__full_header">
+											<div class="offer__full_pic">
+												<img src="content/offer_thumb.jpg" width="42" height="42" alt="">
+											</div>
+											<h1 class="offer__header_title">Брозовый загар в солярии за полцены</h1>
+										</header>
+										<div class="stock__desc">
+											<ul class="stock__params">
+												<li class="stock__params_item">
+													<strong class="stock__params_param">Продано:</strong>
+													<span class="stock__params_value">2 купона</span>
+												</li>
+												<li class="stock__params_item">
+													<strong class="stock__params_param">Осталось:</strong>
+													<span class="stock__params_value">1700 купонов</span>
+												</li>
+												<li class="stock__params_item">
+													<strong class="stock__params_param">До конца акции:</strong>
+													<span class="stock__params_value">4 часа</span>
+												</li>
+											</ul>
+										</div>
+										<div class="stock__func">
+											<ul class="stock__functions">
+												<li class="stock__functions_item edit__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Редактировать акцию</a>
+												</li>
+												<li class="stock__functions_item close__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Прекратить акцию</a>
+												</li>
+												<li class="stock__functions_item stats__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Посмотреть статистику</a>
+												</li>
+												<li class="stock__functions_item download__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Скачать список кодов</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article class="stock ss">
+						<div class="stock__wrapper">
+							<div class="stock__wrap">
+								<div class="stock__main">
+									<div class="stock__main_wrap">
+										<header class="offer__full_header">
+											<div class="offer__full_pic">
+												<img src="content/offer_thumb.jpg" width="42" height="42" alt="">
+											</div>
+											<h1 class="offer__header_title">Брозовый загар в солярии за полцены</h1>
+										</header>
+										<div class="stock__desc">
+											<ul class="stock__params">
+												<li class="stock__params_item">
+													<strong class="stock__params_param">Продано:</strong>
+													<span class="stock__params_value">2 купона</span>
+												</li>
+												<li class="stock__params_item">
+													<strong class="stock__params_param">Осталось:</strong>
+													<span class="stock__params_value">1700 купонов</span>
+												</li>
+												<li class="stock__params_item">
+													<strong class="stock__params_param">До конца акции:</strong>
+													<span class="stock__params_value">4 часа</span>
+												</li>
+											</ul>
+										</div>
+										<div class="stock__func">
+											<ul class="stock__functions">
+												<li class="stock__functions_item edit__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Редактировать акцию</a>
+												</li>
+												<li class="stock__functions_item close__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Прекратить акцию</a>
+												</li>
+												<li class="stock__functions_item stats__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Посмотреть статистику</a>
+												</li>
+												<li class="stock__functions_item download__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Скачать список кодов</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article class="stock ss">
+						<div class="stock__wrapper">
+							<div class="stock__wrap">
+								<div class="stock__main">
+									<div class="stock__main_wrap">
+										<header class="offer__full_header">
+											<div class="offer__full_pic">
+												<img src="content/offer_thumb.jpg" width="42" height="42" alt="">
+											</div>
+											<h1 class="offer__header_title">Брозовый загар в солярии за полцены</h1>
+										</header>
+										<div class="stock__desc">
+											<ul class="stock__params">
+												<li class="stock__params_item">
+													<strong class="stock__params_param">Продано:</strong>
+													<span class="stock__params_value">2 купона</span>
+												</li>
+												<li class="stock__params_item">
+													<strong class="stock__params_param">Осталось:</strong>
+													<span class="stock__params_value">1700 купонов</span>
+												</li>
+												<li class="stock__params_item">
+													<strong class="stock__params_param">До конца акции:</strong>
+													<span class="stock__params_value">4 часа</span>
+												</li>
+											</ul>
+										</div>
+										<div class="stock__func">
+											<ul class="stock__functions">
+												<li class="stock__functions_item edit__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Редактировать акцию</a>
+												</li>
+												<li class="stock__functions_item close__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Прекратить акцию</a>
+												</li>
+												<li class="stock__functions_item stats__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Посмотреть статистику</a>
+												</li>
+												<li class="stock__functions_item download__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Скачать список кодов</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article class="stock ss">
+						<div class="stock__wrapper">
+							<div class="stock__wrap">
+								<div class="stock__main">
+									<div class="stock__main_wrap">
+										<header class="offer__full_header">
+											<div class="offer__full_pic">
+												<img src="content/offer_thumb.jpg" width="42" height="42" alt="">
+											</div>
+											<h1 class="offer__header_title">Брозовый загар в солярии за полцены</h1>
+										</header>
+										<div class="stock__desc">
+											<ul class="stock__params">
+												<li class="stock__params_item">
+													<strong class="stock__params_param">Продано:</strong>
+													<span class="stock__params_value">2 купона</span>
+												</li>
+												<li class="stock__params_item">
+													<strong class="stock__params_param">Осталось:</strong>
+													<span class="stock__params_value">1700 купонов</span>
+												</li>
+												<li class="stock__params_item">
+													<strong class="stock__params_param">До конца акции:</strong>
+													<span class="stock__params_value">4 часа</span>
+												</li>
+											</ul>
+										</div>
+										<div class="stock__func">
+											<ul class="stock__functions">
+												<li class="stock__functions_item edit__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Редактировать акцию</a>
+												</li>
+												<li class="stock__functions_item close__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Прекратить акцию</a>
+												</li>
+												<li class="stock__functions_item stats__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Посмотреть статистику</a>
+												</li>
+												<li class="stock__functions_item download__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Скачать список кодов</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article class="stock ss">
+						<div class="stock__wrapper">
+							<div class="stock__wrap">
+								<div class="stock__main">
+									<div class="stock__main_wrap">
+										<header class="offer__full_header">
+											<div class="offer__full_pic">
+												<img src="content/offer_thumb.jpg" width="42" height="42" alt="">
+											</div>
+											<h1 class="offer__header_title">Брозовый загар в солярии за полцены</h1>
+										</header>
+										<div class="stock__desc">
+											<ul class="stock__params">
+												<li class="stock__params_item">
+													<strong class="stock__params_param">Продано:</strong>
+													<span class="stock__params_value">2 купона</span>
+												</li>
+												<li class="stock__params_item">
+													<strong class="stock__params_param">Осталось:</strong>
+													<span class="stock__params_value">1700 купонов</span>
+												</li>
+												<li class="stock__params_item">
+													<strong class="stock__params_param">До конца акции:</strong>
+													<span class="stock__params_value">4 часа</span>
+												</li>
+											</ul>
+										</div>
+										<div class="stock__func">
+											<ul class="stock__functions">
+												<li class="stock__functions_item edit__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Редактировать акцию</a>
+												</li>
+												<li class="stock__functions_item close__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Прекратить акцию</a>
+												</li>
+												<li class="stock__functions_item stats__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Посмотреть статистику</a>
+												</li>
+												<li class="stock__functions_item download__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Скачать список кодов</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article class="stock ss">
+						<div class="stock__wrapper">
+							<div class="stock__wrap">
+								<div class="stock__main">
+									<div class="stock__main_wrap">
+										<header class="offer__full_header">
+											<div class="offer__full_pic">
+												<img src="content/offer_thumb.jpg" width="42" height="42" alt="">
+											</div>
+											<h1 class="offer__header_title">Брозовый загар в солярии за полцены</h1>
+										</header>
+										<div class="stock__desc">
+											<ul class="stock__params">
+												<li class="stock__params_item">
+													<strong class="stock__params_param">Продано:</strong>
+													<span class="stock__params_value">2 купона</span>
+												</li>
+												<li class="stock__params_item">
+													<strong class="stock__params_param">Осталось:</strong>
+													<span class="stock__params_value">1700 купонов</span>
+												</li>
+												<li class="stock__params_item">
+													<strong class="stock__params_param">До конца акции:</strong>
+													<span class="stock__params_value">4 часа</span>
+												</li>
+											</ul>
+										</div>
+										<div class="stock__func">
+											<ul class="stock__functions">
+												<li class="stock__functions_item edit__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Редактировать акцию</a>
+												</li>
+												<li class="stock__functions_item close__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Прекратить акцию</a>
+												</li>
+												<li class="stock__functions_item stats__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Посмотреть статистику</a>
+												</li>
+												<li class="stock__functions_item download__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Скачать список кодов</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article class="stock ss">
+						<div class="stock__wrapper">
+							<div class="stock__wrap">
+								<div class="stock__main">
+									<div class="stock__main_wrap">
+										<header class="offer__full_header">
+											<div class="offer__full_pic">
+												<img src="content/offer_thumb.jpg" width="42" height="42" alt="">
+											</div>
+											<h1 class="offer__header_title">Брозовый загар в солярии за полцены</h1>
+										</header>
+										<div class="stock__desc">
+											Акция приостановлена
+										</div>
+										<div class="stock__func">
+											<ul class="stock__functions">
+												<li class="stock__functions_item edit__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Редактировать акцию</a>
+												</li>
+												<li class="stock__functions_item close__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Прекратить акцию</a>
+												</li>
+												<li class="stock__functions_item stats__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Посмотреть статистику</a>
+												</li>
+												<li class="stock__functions_item download__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Скачать список кодов</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article class="stock ss">
+						<div class="stock__wrapper">
+							<div class="stock__wrap">
+								<div class="stock__main">
+									<div class="stock__main_wrap">
+										<header class="offer__full_header">
+											<div class="offer__full_pic">
+												<img src="content/offer_thumb.jpg" width="42" height="42" alt="">
+											</div>
+											<h1 class="offer__header_title">Брозовый загар в солярии за полцены</h1>
+										</header>
+										<div class="stock__desc">
+											<ul class="stock__params">
+												<li class="stock__params_item">
+													<strong class="stock__params_param">Продано:</strong>
+													<span class="stock__params_value">2 купона</span>
+												</li>
+												<li class="stock__params_item">
+													<strong class="stock__params_param">Осталось:</strong>
+													<span class="stock__params_value">1700 купонов</span>
+												</li>
+												<li class="stock__params_item">
+													<strong class="stock__params_param">До конца акции:</strong>
+													<span class="stock__params_value">4 часа</span>
+												</li>
+											</ul>
+										</div>
+										<div class="stock__func">
+											<ul class="stock__functions">
+												<li class="stock__functions_item edit__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Редактировать акцию</a>
+												</li>
+												<li class="stock__functions_item close__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Прекратить акцию</a>
+												</li>
+												<li class="stock__functions_item stats__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Посмотреть статистику</a>
+												</li>
+												<li class="stock__functions_item download__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Скачать список кодов</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article class="stock ss">
+						<div class="stock__wrapper">
+							<div class="stock__wrap">
+								<div class="stock__main">
+									<div class="stock__main_wrap">
+										<header class="offer__full_header">
+											<div class="offer__full_pic">
+												<img src="content/offer_thumb.jpg" width="42" height="42" alt="">
+											</div>
+											<h1 class="offer__header_title">Брозовый загар в солярии за полцены</h1>
+										</header>
+										<div class="stock__desc">
+											<ul class="stock__params">
+												<li class="stock__params_item">
+													<strong class="stock__params_param">Продано:</strong>
+													<span class="stock__params_value">2 купона</span>
+												</li>
+												<li class="stock__params_item">
+													<strong class="stock__params_param">Осталось:</strong>
+													<span class="stock__params_value">1700 купонов</span>
+												</li>
+												<li class="stock__params_item">
+													<strong class="stock__params_param">До конца акции:</strong>
+													<span class="stock__params_value">4 часа</span>
+												</li>
+											</ul>
+										</div>
+										<div class="stock__func">
+											<ul class="stock__functions">
+												<li class="stock__functions_item edit__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Редактировать акцию</a>
+												</li>
+												<li class="stock__functions_item close__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Прекратить акцию</a>
+												</li>
+												<li class="stock__functions_item stats__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Посмотреть статистику</a>
+												</li>
+												<li class="stock__functions_item download__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Скачать список кодов</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article class="stock ss">
+						<div class="stock__wrapper">
+							<div class="stock__wrap">
+								<div class="stock__main">
+									<div class="stock__main_wrap">
+										<header class="offer__full_header">
+											<div class="offer__full_pic">
+												<img src="content/offer_thumb.jpg" width="42" height="42" alt="">
+											</div>
+											<h1 class="offer__header_title">Брозовый загар в солярии за полцены</h1>
+										</header>
+										<div class="stock__desc">
+											Акция на модерации
+										</div>
+										<div class="stock__func">
+											<ul class="stock__functions">
+												<li class="stock__functions_item edit__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Редактировать акцию</a>
+												</li>
+												<li class="stock__functions_item close__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Прекратить акцию</a>
+												</li>
+												<li class="stock__functions_item stats__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Посмотреть статистику</a>
+												</li>
+												<li class="stock__functions_item download__link">
+													<div class="icon"></div>
+													<a href="#" class="stock__functions_link">Скачать список кодов</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<footer id="footer">
+	<div class="wrap">
+		<div class="contacts">
+			<div class="contacts__phone">
+				<div class="contacts__icon phone"></div>
+				Тел.: <span class="phone">8 (495) 640 4950</span>
+			</div>
+			<div class="contacts__mail">
+				<div class="contacts__icon mail"></div>
+				<a href="mailto:mail@buybylike.com" class="contacts__link">mail@buybylike.com</a>
+			</div>
+			<div class="contacts__social">
+				В соцсетях:
+				<ul class="social">
+					<li class="social__item">
+						<a href="#" class="social__link"><img src="assets/icons/social.gif" width="64" height="32" alt="" class="social__icon fb"></a>
+					</li>
+					<li class="social__item">
+						<a href="#" class="social__link"><img src="assets/icons/social.gif" width="64" height="32" alt="" class="social__icon tw"></a>
+					</li>
+					<li class="social__item">
+						<a href="#" class="social__link"><img src="assets/icons/social.gif" width="64" height="32" alt="" class="social__icon vk"></a>
+					</li>
+					<li class="social__item">
+						<a href="#" class="social__link"><img src="assets/icons/social.gif" width="64" height="32" alt="" class="social__icon od"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="start__tostart">
+			<div class="start__tostart_icon"></div>
+			<a href="/" class="start__tostart_link">На главную</a>
+		</div>
+	</div>
+</footer>
+
+<div id="overlay"></div>
+
+<div class="popup login" id="login">
+	<header class="popup__header">
+		<div class="popup__close"></div>
+		<hgroup class="login__welcome">
+			<h1 class="login__welcome_header">Добро пожаловать!</h1>
+			<h2 class="login__welcome_subheader">Войдите и начните получать скидки</h2>
+		</hgroup>
+	</header>
+	<div class="popup__body">
+		<ul class="sociallogin">
+			<li class="sociallogin__item">
+				<a href="#"><img src="assets/login/fb.png" width="140" height="40" alt="" class="sociallogin__btn"></a>
+			</li>
+			<li class="sociallogin__item">
+				<a href="#"><img src="assets/login/vk.png" width="140" height="40" alt="" class="sociallogin__btn"></a>
+			</li>
+			<li class="sociallogin__item">
+				<a href="#"><img src="assets/login/tw.png" width="140" height="40" alt="" class="sociallogin__btn"></a>
+			</li>
+		</ul>
+		<div class="login__skip"><span class="popup__closelink">Пропустить</span></div>
+	</div>
+</div>
+
+</body>
+</html>
