@@ -52,7 +52,10 @@ body {
 	height:auto;
 	position:relative;
 	background:#fff;
+	box-shadow:2px 1px 0 0 #e0e5e9;
 	border:1px solid #e0e5e9;
+	border-right:0;
+	margin:0 auto 60px;
 	}
 	.sidebar {
 		position:absolute;
@@ -69,23 +72,40 @@ body {
 		}
 	.main {
 		position:relative;
-		margin:0 -1px 0 241px;
+		margin:0 -1px 209px 241px;
 		background:#fff;
 		}
 		.offers {
 			font-size:0;
 			margin:0;
 			}
+		.content__wrap {
+			padding:31px 34px;
+			}
+		.content__wrap:after {
+			content:'';
+			display:block;
+			width:0;
+			height:0;
+			clear:both;
+			}
+			.content__aside {
+				float:right;
+				width:402px;
+				}
+			.content__wrapper {
+				margin:0 430px 0 0;
+				}
 #wrapper {
 	min-height:100%;
 	}
 	#wrap {
-		padding:0 0 100px;
+		padding:0 0 115px;
 		}
 #footer {
 	height:100px;
 	position:relative;
-	margin:-100px 0 -100px;
+	margin:-115px 0 -100px;
 	padding:15px 0 0;
 	}
 
@@ -624,8 +644,20 @@ body {
 					border:1px solid #a9a7a4;
 					background:#b4bbbf url('/assets/loader.gif') center center no-repeat;
 					}
+				.ss .offer__brief_pic {
+					width:208px;
+					height:141px;
+					}
+				.ls .offer__brief_pic {
+					width:448px;
+					height:178px;
+					}
+				.sl .offer__brief_pic {
+					width:208px;
+					height:349px;
+					}
 				.offer__brief_desc {
-					margin:8px 0 0 65px;
+					margin:8px 0 0 0;
 					}
 					.offer__price {
 						position:relative;
@@ -1838,3 +1870,8 @@ body {
 	cursor:pointer;
 	}
 
+.avatar {
+	display:inline-block;
+	vertical-align:middle;
+	border:1px solid #dee3e6;
+	}

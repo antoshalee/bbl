@@ -1,0 +1,255 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Buy by like</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+	<script src="js/jquery.masonry.min.js"></script>
+	<script src="js/jquery.slideit.js"></script>
+	<script src="js/jquery.jscrollpane.js"></script>
+	<script src="js/jquery.mousewheel.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+
+<div id="flag"></div>
+
+<header role="banner" id="header">
+	<div class="wrap">
+		<a href="/"><img src="assets/logo.png" width="128" height="27" alt="" class="logo"></a>
+		<ul class="sitenav">
+			<li class="sitenav__item"><a href="/" class="sitenav__link">Старт</a></li>
+			<li class="sitenav__item"><a href="/offers" class="sitenav__link">Акции</a></li>
+			<li class="sitenav__item"><a href="/about" class="sitenav__link">О проекте</a></li>
+			<li class="sitenav__item"><a href="/business" class="sitenav__link">Бизнесу</a></li>
+		</ul>
+		<div class="bar">
+			<div class="cityselect">
+				<div class="cityselect__current js_dropdownpopup" data-rel="city">Москва</div>
+				<div class="dropdownpopup city" id="city">
+					<div class="popup__header">
+						<div class="popup__close"></div>
+						<h1 class="popup__header_title">Ваш город <span class="sale">Москва</span>?</h1>
+					</div>
+					<div class="popup__body">
+						<ul class="cities">
+							<li class="cities__item current">
+								<a href="#" class="cities__link">Москва</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Санкт-Петербург</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Альметьевск</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Архангельск</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Астрахань</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Барнаул</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Казань</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Калининград</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Калуга</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Кемерово</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Киров</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Кострома</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Омск</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Орел</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Оренбург</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Пенза</a>
+							</li>
+							<li class="cities__item">
+								<a href="#" class="cities__link">Петропавловск-Камчатский</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="userbar opened">
+				<div class="userbar__userpic">
+					<img src="content/userpic.jpg" width="22" height="22" class="userbar__userpic_photo" alt="">
+					<div class="userbar__menu">
+						<ul class="userbar__menu_list">
+							<li class="userbar__menu_item"><a href="#" class="userbar__link">Мои купоны</a></li>
+							<li class="userbar__menu_item"><a href="#" class="userbar__link">Настройки</a></li>
+						</ul>
+						<div class="userbar__logout"><a href="#" class="userbar__link">Выйти</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="basket">
+				<div class="basket__count">3</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div id="wrapper">
+	<div id="wrap">
+		<header class="pageheader wrap">
+			<div class="search">
+				<form action="/" method="post">
+					<input type="text" name="q" class="search__input" placeholder="Поиск по акциям">
+					<button type="submit" class="search__submit"><img src="assets/icons/func.png" width="80" height="32" class="search__submit_icon" alt=""></button>
+				</form>
+			</div>
+			<h1 class="pageheader__title">Мои купоны</h1>
+			<nav class="pageheader__nav">
+				<ul class="pageheader__nav_list">
+					<li class="pageheader__nav_item">
+						<div class="settings">
+							<a href="#"><span class="pageheader__icon settings__icon"></span>Настройки</a>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<div role="main" class="content wrap" id="offers">
+			<div class="content__wrap">
+				<form action="/" method="post" class="form">
+					<aside class="content__aside">
+						<fieldset class="form__photoupload">
+							<img src="content/avatar.jpg" width="79" height="79" alt="" class="avatar">
+							<input type="file" class="form__photoupload_input" name="" id="">
+						</fieldset>
+					</aside>
+					<div class="content__wrapper">
+						<fieldset class="form__fieldset">
+							<div class="field">
+								<div class="field__label">
+									<label for="f_name" class="label">Имя</label>
+								</div>
+								<div class="field__input">
+									<div class="input__wrap">
+										<input type="text" id="f_name" name="name" class="input">
+									</div>
+								</div>
+							</div>
+							<div class="field">
+								<div class="field__label">
+									<label for="f_phone" class="label">Номер телефона</label>
+								</div>
+								<div class="field__input">
+									<div class="input__wrap">
+										<input type="text" id="f_phone" name="phone" class="input">
+									</div>
+								</div>
+							</div>
+							<div class="field">
+								<div class="field__label">
+									<label for="f_intresting" class="label">Интересы</label>
+								</div>
+								<div class="field__input">
+									<div class="input__wrap">
+										<input type="text" id="f_intresting" name="intresting" class="input">
+									</div>
+								</div>
+							</div>
+							<div class="field">
+								<div class="field__label">
+									<label for="f_intresting" class="label">Социальные сети</label>
+								</div>
+								<div class="field__input">
+									<div class="input__wrap">
+										<input type="text" id="f_intresting" name="intresting" class="input">
+									</div>
+								</div>
+							</div>
+						</fieldset>
+						<div class="form__submit">
+							<button class="btn" type="submit">Сохранить изменения</button>	
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<footer id="footer">
+	<div class="wrap">
+		<div class="contacts">
+			<div class="contacts__phone">
+				<div class="contacts__icon phone"></div>
+				Тел.: <span class="phone">8 (495) 640 4950</span>
+			</div>
+			<div class="contacts__mail">
+				<div class="contacts__icon mail"></div>
+				<a href="mailto:mail@buybylike.com" class="contacts__link">mail@buybylike.com</a>
+			</div>
+			<div class="contacts__social">
+				В соцсетях:
+				<ul class="social">
+					<li class="social__item">
+						<a href="#" class="social__link"><img src="assets/icons/social.gif" width="64" height="32" alt="" class="social__icon fb"></a>
+					</li>
+					<li class="social__item">
+						<a href="#" class="social__link"><img src="assets/icons/social.gif" width="64" height="32" alt="" class="social__icon tw"></a>
+					</li>
+					<li class="social__item">
+						<a href="#" class="social__link"><img src="assets/icons/social.gif" width="64" height="32" alt="" class="social__icon vk"></a>
+					</li>
+					<li class="social__item">
+						<a href="#" class="social__link"><img src="assets/icons/social.gif" width="64" height="32" alt="" class="social__icon od"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="start__tostart">
+			<div class="start__tostart_icon"></div>
+			<a href="/" class="start__tostart_link">На главную</a>
+		</div>
+	</div>
+</footer>
+
+<div id="overlay"></div>
+
+<div class="popup login" id="login">
+	<header class="popup__header">
+		<div class="popup__close"></div>
+		<hgroup class="login__welcome">
+			<h1 class="login__welcome_header">Добро пожаловать!</h1>
+			<h2 class="login__welcome_subheader">Войдите и начните получать скидки</h2>
+		</hgroup>
+	</header>
+	<div class="popup__body">
+		<ul class="sociallogin">
+			<li class="sociallogin__item">
+				<a href="#"><img src="assets/login/fb.png" width="140" height="40" alt="" class="sociallogin__btn"></a>
+			</li>
+			<li class="sociallogin__item">
+				<a href="#"><img src="assets/login/vk.png" width="140" height="40" alt="" class="sociallogin__btn"></a>
+			</li>
+			<li class="sociallogin__item">
+				<a href="#"><img src="assets/login/tw.png" width="140" height="40" alt="" class="sociallogin__btn"></a>
+			</li>
+		</ul>
+		<div class="login__skip"><span class="popup__closelink">Пропустить</span></div>
+	</div>
+</div>
+
+</body>
+</html>
