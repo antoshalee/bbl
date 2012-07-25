@@ -141,48 +141,208 @@
 						<fieldset class="form__fieldset">
 							<div class="field">
 								<div class="field__label">
-									<label for="f_name" class="label">Имя</label>
+									<div class="field__label_wrap">
+										<label for="f_title" class="label">Заголовок</label>
+									</div>
 								</div>
 								<div class="field__input">
 									<div class="input__wrap">
-										<input type="text" id="f_name" name="name" class="input">
-									</div>
-									<div class="field__tip">текст, который объясяет, зачем мне нужно указывать мое реальное имя</div>
-								</div>
-							</div>
-							<div class="field">
-								<div class="field__label">
-									<label for="f_phone" class="label">Номер телефона</label>
-								</div>
-								<div class="field__input m-phone">
-									<div class="m-phone__code">+7</div>
-									<div class="input__wrap">
-										<input type="text" id="f_phone" name="phone" class="input">
+										<input type="text" id="f_title" name="title" class="input">
 									</div>
 								</div>
 							</div>
 							<div class="field">
 								<div class="field__label">
-									<label for="f_intresting" class="label">Интересы</label>
+									<div class="field__label_wrap">
+										<label for="f_brief" class="label">Краткое описание</label>
+									</div>
 								</div>
 								<div class="field__input">
 									<div class="input__wrap">
-										<textarea name="f_intresting" id="f_intresting" cols="30" rows="10" class="textarea"></textarea>
+										<textarea name="brief" id="f_brief" cols="30" rows="10" class="textarea"></textarea>
 									</div>
-									<div class="field__tip">инструкция как вводить интересы через запятую (не все же хипстеры)</div>
 								</div>
 							</div>
 							<div class="field">
 								<div class="field__label">
-									<span class="label">Социальные сети</span>
+									<div class="field__label_wrap">
+										<label for="f_desc" class="label">Полное описание</label>
+									</div>
 								</div>
 								<div class="field__input">
-									
+									<div class="input__wrap">
+										<textarea name="desc" id="f_desc" cols="30" rows="10" class="textarea m-long"></textarea>
+									</div>
+								</div>
+							</div>
+							<div class="field">
+								<div class="field__label">
+									<div class="field__label_wrap">
+										<label for="f_cats" class="label">Категории</label>
+									</div>
+								</div>
+								<div class="field__input">
+									<div class="input__wrap">
+										<input type="text" id="f_cats" name="cats" class="input">
+									</div>
+									<div class="field__tip">инструкция как вводить категории через запятую, указание количества категорий для тарифа</div>
+								</div>
+							</div>
+							<div class="field">
+								<div class="field__label">
+									<div class="field__label_wrap">
+										<label for="f_city" class="label">Город проведения</label>
+									</div>
+								</div>
+								<div class="field__input">
+									<div class="input__wrap">
+										<input type="text" id="f_city" name="city" class="input">
+									</div>
+								</div>
+							</div>
+							<div class="field">
+								<div class="field__label">
+									<div class="field__label_wrap">
+										<label for="f_oldprice" class="label">Начальная цена</label>
+									</div>
+								</div>
+								<div class="field__input">
+									<div class="input__wrap m-short">
+										<input type="text" id="f_oldprice" name="oldprice" class="input">
+									</div>
+								</div>
+							</div>
+							<div class="field">
+								<div class="field__label">
+									<div class="field__label_wrap">
+										<label for="f_newprice" class="label">Конечная цена (со скидкой)</label>
+									</div>
+								</div>
+								<div class="field__input">
+									<div class="input__wrap m-short">
+										<input type="text" id="f_newprice" name="newprice" class="input">
+									</div>
+								</div>
+							</div>
+							<div class="field">
+								<div class="field__label">
+									<div class="field__label_wrap">
+										<label for="f_valute" class="label">Тип валюты</label>
+									</div>
+								</div>
+								<div class="field__input">
+									<div class="input__wrap m-short">
+										<input type="text" id="f_valute" name="valute" class="input">
+									</div>
+								</div>
+							</div>
+							<div class="field">
+								<div class="field__label">
+									<div class="field__label_wrap">
+										<label for="f_coupons" class="label">Количество купонов</label>
+									</div>
+								</div>
+								<div class="field__input">
+									<div class="input__wrap m-short">
+										<input type="text" id="f_coupons" name="coupons" class="input">
+									</div>
+									<div class="field__inlinetip">
+										в рамках вашего тарифа вы можете разместить до <strong>1000</strong> купонов
+									</div>
+								</div>
+							</div>
+							<div class="field">
+								<div class="field__label">
+									<div class="field__label_wrap">
+										<label for="f_offerperiod_start" class="label">Срок действия акции</label>
+									</div>
+								</div>
+								<div class="field__input">
+									<div class="input__wrap m-short">
+										<input type="date" id="f_offerperiod" name="offerperiod_start" class="input">
+									</div>
+									<span class="input__dash">—</span>
+									<div class="input__wrap m-short">
+										<input type="date" id="f_offerperiod" name="offerperiod_end" class="input">
+									</div>
+								</div>
+							</div>
+							<div class="field">
+								<div class="field__label">
+									<div class="field__label_wrap">
+										<label for="f_couponperiod_start" class="label">Срок действия купона</label>
+									</div>
+								</div>
+								<div class="field__input">
+									<div class="input__wrap m-short">
+										<input type="date" id="f_couponperiod" name="couponperiod_start" class="input">
+									</div>
+									<span class="input__dash">—</span>
+									<div class="input__wrap m-short">
+										<input type="date" id="f_couponperiod" name="couponperiod_end" class="input">
+									</div>
+								</div>
+							</div>
+							<div class="field">
+								<div class="field__label">
+									<div class="field__label_wrap">
+										<label for="f_address" class="label">Адрес</label>
+									</div>
+								</div>
+								<div class="field__input">
+									<div class="input__wrap">
+										<input type="text" id="f_address" name="address" class="input">
+									</div>
+									<div class="field__tip m-checkbox">
+										<input type="checkbox" class="checkbox" name="showonmap" id="showonmap">
+										<label for="showonmap">Показать на карте</label>
+									</div>
+								</div>
+							</div>
+							<div class="field">
+								<div class="field__label">
+									<div class="field__label_wrap">
+										<label for="f_phones" class="label">Телефоны</label>
+									</div>
+								</div>
+								<div class="field__input">
+									<div class="input__wrap">
+										<input type="text" id="f_phones" name="phones" class="input">
+									</div>
+								</div>
+							</div>
+							<div class="field">
+								<div class="field__label">
+									<div class="field__label_wrap">
+										<label for="f_site" class="label">Cайт</label>
+									</div>
+								</div>
+								<div class="field__input">
+									<div class="input__wrap">
+										<input type="text" id="f_site" name="site" class="input error">
+									</div>
+								</div>
+							</div>
+							<div class="field">
+								<div class="field__label">
+									<div class="field__label_wrap">
+										<label for="f_desc" class="label">Условия</label>
+									</div>
+								</div>
+								<div class="field__input">
+									<div class="input__wrap">
+										<textarea name="desc" id="f_desc" cols="30" rows="10" class="textarea"></textarea>
+									</div>
+									<div class="field__tip m-checkbox">
+										<input type="checkbox" name="license" id="license" class="checkbox">
+										<label for="license">Дополнительные условия</label>
+									</div>
 								</div>
 							</div>
 						</fieldset>
 						<div class="form__submit">
-							<button class="btn" type="submit">Сохранить изменения</button>	
+							<button class="btn" type="submit">Добавить акцию</button>	
+							<button class="btn gray">Предварительный просмотр</button>	
 						</div>
 					</div>
 				</form>
