@@ -144,7 +144,10 @@
 
 
 /* Like */
-.like {
+.like,
+.like.disabled,
+.like.disabled:hover,
+.like.disabled:active {
 	display:inline-block;
 	font:13px/23px 'ProximaNovaRgBold';
 	color:#fff;
@@ -194,8 +197,20 @@
 	}
 	.like__icon {
 		display:block;
-		font:bold 13px/23px Arial, Helvetica, sans-serif;
+		width:50px;
+		height:16px;
+		font:bold 13px/16px Arial, Helvetica, sans-serif;
+		margin:3px 0;
 		padding:0 9px;
+		background:url('/assets/like.png') center center no-repeat;
+		text-indent:-9999px;
+		}
+.like.disabled {
+	opacity:0.5;
+	cursor:default !important;
+	}
+	.like.disabled .like__icon {
+		cursor:default;
 		}
 
 

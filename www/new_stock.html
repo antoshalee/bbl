@@ -132,9 +132,48 @@
 			<div class="content__wrap">
 				<form action="/" method="post" class="form">
 					<aside class="content__aside">
-						<fieldset class="form__photoupload">
-							<img src="content/avatar.jpg" width="79" height="79" alt="" class="avatar">
-							<input type="file" class="form__photoupload_input" name="" id="">
+						<fieldset class="newoffer">
+							<h2 class="newoffer__header">Главное изображение</h2>
+							<div class="newoffer__desc">выводится на главной странице</div>
+							<input type="file" name="" id="">
+							<div class="offertype">
+								<div class="offertype__wrap">
+									<h3 class="offertype__header">Формат:</h3>
+									<input type="radio" name="offertype" id="offertype_ss" class="offertype__radio" checked>
+									<label for="offertype_ss" class="offertype__label">
+										<div class="offertype__preview">
+											<img src="/assets/offerpreview/ss.jpg" width="190" height="190" alt="" class="offertype__preview_img">
+										</div>
+										<span class="offertype__icon"></span>
+									</label>
+									<input type="radio" name="offertype" id="offertype_ls" class="offertype__radio">
+									<label for="offertype_ls" class="offertype__label">
+										<div class="offertype__preview">
+											<img src="/assets/offerpreview/sl.jpg" width="190" height="190" alt="" class="offertype__preview_img">
+										</div>
+										<span class="offertype__icon"></span>
+									</label>
+									<input type="radio" name="offertype" id="offertype_sl" class="offertype__radio">
+									<label for="offertype_sl" class="offertype__label">
+										<div class="offertype__preview">
+											<img src="/assets/offerpreview/ls.jpg" width="190" height="190" alt="" class="offertype__preview_img">
+										</div>
+										<span class="offertype__icon"></span>
+									</label>
+									<input type="radio" name="offertype" id="offertype_ll" class="offertype__radio">
+									<label for="offertype_ll" class="offertype__label">
+										<div class="offertype__preview">
+											<img src="/assets/offerpreview/ll.jpg" width="190" height="190" alt="" class="offertype__preview_img">
+										</div>
+										<span class="offertype__icon"></span>
+									</label>
+								</div>
+							</div>
+						</fieldset>
+						<fieldset class="newoffer">
+							<h2 class="newoffer__header">Дополнительные изображения</h2>
+							<div class="newoffer__desc">выводится на странице акции в маленьких окошках</div>
+							<input type="file" name="" id="">
 						</fieldset>
 					</aside>
 					<div class="content__wrapper">
