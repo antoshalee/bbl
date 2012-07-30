@@ -130,70 +130,46 @@
 		</header>
 		<div role="main" class="content wrap" id="offers">
 			<div class="content__wrap">
-				<form action="/" method="post" class="form">
-					<aside class="content__aside">
-						<fieldset class="form__photoupload">
-							<img src="content/avatar.jpg" width="79" height="79" alt="" class="avatar">
-							<input type="file" class="form__photoupload_input" name="" id="">
-						</fieldset>
-					</aside>
-					<div class="content__wrapper">
-						<fieldset class="form__fieldset">
-							<div class="field">
-								<div class="field__label">
-									<div class="field__label_wrap">
-										<label for="f_name" class="label">Имя</label>
-									</div>
-								</div>
-								<div class="field__input">
-									<div class="input__wrap">
-										<input type="text" id="f_name" name="name" class="input">
-									</div>
-									<div class="field__tip">текст, который объясяет, зачем мне нужно указывать мое реальное имя</div>
-								</div>
-							</div>
-							<div class="field">
-								<div class="field__label">
-									<div class="field__label_wrap">
-										<label for="f_phone" class="label">Номер телефона</label>
-									</div>
-								</div>
-								<div class="field__input m-phone">
-									<div class="m-phone__code">+7</div>
-									<div class="input__wrap">
-										<input type="text" id="f_phone" name="phone" class="input">
-									</div>
-								</div>
-							</div>
-							<div class="field">
-								<div class="field__label">
-									<div class="field__label_wrap">
-										<label for="f_intresting" class="label">Интересы</label>
-									</div>
-								</div>
-								<div class="field__input">
-									<div class="input__wrap">
-										<textarea name="f_intresting" id="f_intresting" cols="30" rows="10" class="textarea"></textarea>
-									</div>
-									<div class="field__tip">инструкция как вводить интересы через запятую (не все же хипстеры)</div>
-								</div>
-							</div>
-							<div class="field">
-								<div class="field__label">
-									<div class="field__label_wrap">
-										<span class="label">Социальные сети</span>
-									</div>
-								</div>
-								<div class="field__input">
-									
-								</div>
-							</div>
-						</fieldset>
-						<div class="form__submit">
-							<button class="btn" type="submit">Сохранить изменения</button>	
-						</div>
-					</div>
-				</form>
+				<aside class="content__aside">
+					<fieldset class="form__photoupload">
+						<img src="content/avatar.jpg" width="79" height="79" alt="" class="avatar">
+						<input type="file" class="form__photoupload_input" name="" id="">
+					</fieldset>
+				</aside>
+				<div class="content__wrapper">
+					<ul class="csettings">
+						<li class="csettings__item">
+							<h2 class="csettings__header">Имя пользователя</h2>
+							<div class="csettings__value">«Рога и копыта»</div>
+							<span class="csettings__change">Изменить имя</span>
+						</li>
+						<li class="csettings__item">
+							<h2 class="csettings__header">Пароль</h2>
+							<div class="csettings__value">*****</div>
+							<span class="csettings__change">Изменить пароль</span>
+						</li>
+						<li class="csettings__item">
+							<h2 class="csettings__header">Электронная почта</h2>
+							<div class="csettings__value">name@company.ru</div>
+							<span class="csettings__change">Изменить электронную почту</span>
+						</li>
+						<li class="csettings__item">
+							<h2 class="csettings__header">Кредитная карта</h2>
+							<div class="csettings__value">MasterCard xxxx-xxxx-xxxx-1234</div>
+							<span class="csettings__change">Изменить кредитную карту или добавить новую</span>
+						</li>
+						<li class="csettings__item">
+							<h2 class="csettings__header">Тарифный план</h2>
+							<div class="csettings__value">Текущий тарифный план «Расширенный»: 10 акций, 1000 купонов, расширенная статистика</div>
+							<span class="csettings__change">Изменить тарифный план</span>
+						</li>
+						<li class="csettings__item">
+							<h2 class="csettings__header">Статистика</h2>
+							<div class="csettings__value">Вы использовали 9 акций в текущем месяце, купоны получили 1700 человек</div>
+							<span class="csettings__change">Расширенная статистика</span>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -1977,3 +1977,38 @@ body {
 				.offertype__icon.ll {
 					background-position-y:-54px;
 					}
+
+/* Client settings */
+.csettings {
+	border:1px solid #dee3e6;
+	background:#f8f8f8;
+	overflow:hidden;
+	}
+	.csettings__item {
+		border-top:1px solid #fff;
+		border-bottom:1px solid #dee3e6;
+		margin:1px 0 -1px;
+		padding:10px 30px 16px;
+		}
+	.csettings__item:first-child {
+		margin-top:0;
+		padding-top:25px;
+		}
+		.csettings__header {
+			font:bold 20px 'Calibri', Arial, Helvetica, sans-serif;
+			color:#555c66;
+			margin:0 0 12px;
+			}
+		.csettings__value {
+			font:14px Arial, Helvetica, sans-serif;
+			color:#555c66;
+			margin:0 0 8px;
+			}
+		.csettings__change {
+			font:14px Arial, Helvetica, sans-serif;
+			color:#98a1a4;
+			cursor:pointer;
+			}
+		.csettings__change:hover {
+			color:#a9b1b4;
+			}
