@@ -634,29 +634,33 @@
 	</div>
 </footer>
 
-<div id="overlay"></div>
+<div id="overlay" style="display:block;"></div>
 
-<div class="popup login" id="login">
+<div class="popup login" style="display:block;" id="login">
 	<header class="popup__header">
 		<div class="popup__close"></div>
 		<hgroup class="login__welcome">
 			<h1 class="login__welcome_header">Добро пожаловать!</h1>
-			<h2 class="login__welcome_subheader">Войдите и начните получать скидки</h2>
+			<h2 class="login__welcome_subheader">Войдите и что-то еще</h2>
 		</hgroup>
 	</header>
 	<div class="popup__body">
-		<ul class="sociallogin">
-			<li class="sociallogin__item">
-				<a href="#"><img src="assets/login/fb.png" width="140" height="40" alt="" class="sociallogin__btn"></a>
-			</li>
-			<li class="sociallogin__item">
-				<a href="#"><img src="assets/login/vk.png" width="140" height="40" alt="" class="sociallogin__btn"></a>
-			</li>
-			<li class="sociallogin__item">
-				<a href="#"><img src="assets/login/tw.png" width="140" height="40" alt="" class="sociallogin__btn"></a>
-			</li>
-		</ul>
-		<div class="login__skip"><span class="popup__closelink">Пропустить</span></div>
+		<form action="/" class="clogin">
+			<div class="clogin__field">
+				<div class="input__wrap">
+					<input type="text" id="f_title" name="mail" class="input" placeholder="Электронная почта">
+				</div>
+			</div>
+			<div class="clogin__field">
+				<div class="input__wrap">
+					<input type="password" id="f_title" name="password" class="input" placeholder="Пароль">
+				</div>
+			</div>
+			<div class="clogin__submit">
+				<a href="#" class="clogin__forgot">Забыли пароль?</a>
+				<button type="submit" class="btn">Войти на сайт</button>
+			</div>
+		</form>
 	</div>
 </div>
 

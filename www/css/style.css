@@ -2012,3 +2012,22 @@ body {
 		.csettings__change:hover {
 			color:#a9b1b4;
 			}
+
+/* Client login */
+.clogin {
+	width:364px;
+	margin:26px auto 44px;
+	}
+	.clogin__field {
+		margin:0 0 19px;
+		}
+	.clogin__submit {
+		padding:10px 0 0;
+		}
+		.clogin__forgot {
+			float:right;
+			text-decoration:none;
+			vertical-align:middle;
+			font:14px/35px Arial, Helvetica, sans-serif;
+			color:#98a1a4;
+			}
