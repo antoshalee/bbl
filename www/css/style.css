@@ -684,7 +684,7 @@ body {
 								margin:0 0 0 -3px;
 								}
 						.offer__price_old {
-							font:13px/16px 'ProximaNovaRgBold';
+							font:16px/16px 'ProximaNovaRgBold';
 							color:#ccc;
 							}
 							.offer__price_old .offer__price_sum {
@@ -769,7 +769,7 @@ body {
 					.offer__full .offer__price_new {
 						display:inline-block;
 						font:21px 'ProximaNovaRgBold';
-						margin:0 15px 0 0;
+						margin:0 8px 0 0;
 						}
 						.offer__full .offer__price_sum {}
 						.offer__full .offer__price_currence {
@@ -777,7 +777,7 @@ body {
 							}
 					.offer__full .offer__price_old {
 						display:inline-block;
-						font:17px 'ProximaNovaRgBold';
+						font:20px 'ProximaNovaRgBold';
 						}
 						.offer__full .offer__price_old .offer__price_sum {}
 						.offer__full .offer__price_old .offer__price_currence {
@@ -843,6 +843,7 @@ body {
 					right:-27px;
 					left:-27px;
 					-webkit-transition:left 0.2s ease,right 0.2s ease;
+					transition:left 0.2s ease,right 0.2s ease;
 					z-index:10;
 					}
 				.ll__gallery_control_wrap:hover {
@@ -887,7 +888,7 @@ body {
 						font:13px 'ProximaNovaRgBold';
 						}
 				.ll .offer__price_old {
-					font:17px 'ProximaNovaRgBold';
+					font:18px 'ProximaNovaRgBold';
 					}
 					.ll .offer__price_old .offer__price_sum {}
 					.ll .offer__price_old .offer__price_currence {
@@ -1085,6 +1086,9 @@ body {
 	padding:1px;
 	-webkit-box-shadow:0 0 8px 0 rgba(0,0,0,0.4);
 	box-shadow:0 0 8px 0 rgba(0,0,0,0.4);
+	-webkit-border-radius:7px;
+	-moz-border-radius:7px;
+	border-radius:7px;
 	}
 	.popup__header {
 		background:url('/assets/bg.gif');
@@ -1118,6 +1122,9 @@ body {
 			font:27px 'ProximaNovaRgBold';
 			color:#465161;
 			margin:0 0 10px;
+			white-space:nowrap;
+			width:860px;
+			overflow:hidden;
 			}
 			.popup__header_title .sale {
 				color:#e96a00;
@@ -1136,10 +1143,8 @@ body {
 				color:#4f5359;
 				margin-right:25px;
 				}
+	.popup__body {}
 
-	.popup__body {
-
-		}
 
 .popup.card {
 	width:940px;
@@ -1257,45 +1262,49 @@ body {
 		padding:0 30px 0 0;
 		width:280px;
 		height:480px;
-		overflow:auto;
 		font:13px/17px Arial, Helvetica, sans-serif;
 		color:#999;
 		}
-		.offerdesc__description_brief {
-			font:15px/18px 'ProximaNovaRgBold';
-			color:#465161;
-			margin:0 0 14px;
+		.offerdesc__description .scrollpane {
+			width:280px;
+			padding:0 30px 0 0;
+			height:300px;
 			}
-		.offerdesc__description_full {
-			margin:0 0 25px;
-			}
-		.offerdesc__description_price {}
-			.offerdesc__description_price .offer__price {
-				left:0;
-				float:none;
-				margin:0;
+			.offerdesc__description_brief {
+				font:15px/18px 'ProximaNovaRgBold';
+				color:#465161;
+				margin:0 0 14px;
 				}
-				.offerdesc__description_price .offer__price_new {
-					display:inline-block;
-					vertical-align:middle;
-					margin-right:16px;
+			.offerdesc__description_full {
+				margin:0 0 25px;
+				}
+			.offerdesc__description_price {}
+				.offerdesc__description_price .offer__price {
+					left:0;
+					float:none;
+					margin:0;
 					}
-					.offerdesc__description_price .offer__price_new .offer__price_sum {
-						font-size:26px;
+					.offerdesc__description_price .offer__price_new {
+						display:inline-block;
+						vertical-align:middle;
+						margin-right:16px;
 						}
-					.offerdesc__description_price .offer__price_new .offer__price_currence {
-						font-size:14px;
+						.offerdesc__description_price .offer__price_new .offer__price_sum {
+							font-size:26px;
+							}
+						.offerdesc__description_price .offer__price_new .offer__price_currence {
+							font-size:14px;
+							}
+					.offerdesc__description_price .offer__price_old {
+						display:inline-block;
+						vertical-align:middle;
 						}
-				.offerdesc__description_price .offer__price_old {
-					display:inline-block;
-					vertical-align:middle;
-					}
-					.offerdesc__description_price .offer__price_old .offer__price_sum {
-						font-size:21px;
-						}
-					.offerdesc__description_price .offer__price_old .offer__price_currence {
-						font-size:12px;
-						}
+						.offerdesc__description_price .offer__price_old .offer__price_sum {
+							font-size:21px;
+							}
+						.offerdesc__description_price .offer__price_old .offer__price_currence {
+							font-size:12px;
+							}
 		.offerdesc__contacts {
 			margin:30px 0 0;
 			padding:0 0 0 35px;
