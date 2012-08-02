@@ -268,11 +268,14 @@ body {
 		display:block;
 		}
 		.userbar__menu_list {
-			margin:4px 5px -1px;
+			margin:4px 0 -1px;
 			}
 			.userbar__menu_item {
 				padding:0 0 0 11px;
 				border-bottom:1px dashed #e4e6ea;
+				}
+			.userbar__menu_item:hover {
+				background:#fafafb;
 				}
 			.userbar__logout {
 				background:url('/assets/bg.gif');
