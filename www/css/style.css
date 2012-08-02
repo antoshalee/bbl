@@ -965,6 +965,7 @@ body {
 				color:#fff;
 				-webkit-box-shadow:0 0 0 1px rgba(0,0,0,0.05);
 				box-shadow:0 0 0 1px rgba(0,0,0,0.05);
+				text-shadow:0px 1px 1px #a34300;
 				}
 			.filter__radio:checked + .filter__field:after,
 			.filter__ch:checked + .filter__field:after {
