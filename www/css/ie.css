@@ -1,0 +1,32 @@
+.pageheader__title {
+	filter:dropshadow(color=#ffffff, offx=0, offy=1);
+	}
+
+.pageheader__nav a {
+	filter:dropshadow(color=#ffffff, offx=0, offy=1);
+	}
+
+.coupon__main_wrap {
+	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfbfb', endColorstr='#ededed',GradientType=0 );
+	}
+
+.coupon__code {
+	filter:dropshadow(color=#ffffff, offx=0, offy=1);
+	}
+
+.sitenav__item {
+	filter:dropshadow(color=#452744, offx=0, offy=1);
+	}
+
+.sitenav__item.current,
+.sitenav__item:hover {
+	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#57376a', endColorstr='#5d4678',GradientType=0 );
+	}
+
+.basket__count {
+	filter:dropshadow(color=#9c3404, offx=0, offy=1);
+	}
+
+.offercard__nav {
+	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfbfb', endColorstr='#f9f8f9',GradientType=0 );
+	}
