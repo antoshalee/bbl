@@ -706,9 +706,6 @@ body {
 		.offer__full {
 			position:relative;
 			height:50%;
-			/*background:url('/assets/bg.gif');
-			-webkit-box-shadow:inset 0 0 3px 0 #bdc3c7;
-			box-shadow:inset 0 0 3px 0 #bdc3c7;*/
 			}
 			.offer__full_wrap {
 				position:absolute;
@@ -716,11 +713,6 @@ body {
 				right:8px;
 				bottom:7px;
 				left:8px;
-				/*background:#fbfbfb;
-				border:1px solid #fff;
-				-webkit-box-shadow:0 0 0 1px #cdd1d4;
-				box-shadow:0 0 0 1px #cdd1d4;
-				padding:11px 12px;*/
 				padding:12px 13px;
 				}
 				.offer__full_header {
@@ -763,6 +755,7 @@ body {
 				.offer__full_desc {
 					font:12px/14px Arial, Helvetica, sans-serif;
 					color:#999;
+					word-wrap:break-word;
 					}
 				.offer__full .offer__price {
 					position:absolute;
@@ -1284,9 +1277,11 @@ body {
 				font:15px/18px 'ProximaNovaRgBold';
 				color:#465161;
 				margin:0 0 14px;
+				word-wrap:break-word;
 				}
 			.offerdesc__description_full {
 				margin:0 0 25px;
+				word-wrap:break-word;
 				}
 			.offerdesc__description_price {}
 				.offerdesc__description_price .offer__price {
@@ -1422,7 +1417,7 @@ body {
 		padding:20px 28px;
 		border:1px solid #dee3e6;
 		background:#f8f8f8;
-		white-space:break-word;
+		word-wrap:break-word;
 		}
 .agreement {
 	float:right;
