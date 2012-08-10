@@ -24,6 +24,15 @@ body {
 	top:0;
 	left:0;
 	}
+#support {
+	width:35px;
+	height:131px;
+	position:fixed;
+	top:110px;
+	right:0;
+	background:url('/assets/support.png') no-repeat;
+	z-index:100;
+	}
 
 
 /* LAYOUT */
@@ -185,7 +194,6 @@ body {
 		font:15px/15px 'Calibri', Arial, Helvetica, sans-serif;
 		border-bottom:1px dashed rgba(0,0,0,0.3);
 		cursor:pointer;
-
 		}
 		.cityselect__current span {
 			display:block;
@@ -339,9 +347,7 @@ body {
 			height:0;
 			left:50%;
 			}
-			.start__control_arrows {
-
-				}
+			.start__control_arrows {}
 				.start__control_prev,
 				.start__control_next {
 					width:31px;
@@ -418,9 +424,7 @@ body {
 			border-top:1px solid #dee3e6;
 			z-index:51;
 			}
-			.start__footer_wrap {
-
-				}
+			.start__footer_wrap {}
 				.start__tooffers {
 					display:inline-block;
 					vertical-align:middle;
@@ -492,15 +496,11 @@ body {
 		display:inline-block;
 		vertical-align:top;
 		}
-	.contacts__phone {
-
-		}
+	.contacts__phone {}
 	.contacts__mail {
 		margin:0 25px;
 		}
-	.contacts__social {
-
-		}
+	.contacts__social {}
 		.contacts__icon {
 			display:inline-block;
 			vertical-align:middle;
@@ -923,12 +923,8 @@ body {
 .filter {
 	margin:20px 0 0;
 	}
-	.filter__sections {
-
-		}
-		.filter__sections_item {
-
-			}
+	.filter__sections {}
+		.filter__sections_item {}
 			.filter__radio {
 				display:none;
 				}
@@ -946,8 +942,7 @@ body {
 				padding:0 0 0 30px;
 				-webkit-border-radius:6px 0 0 6px;
 				-moz-border-radius:6px 0 0 6px;
-				border-radius:6px 0 0 6px;
-				
+				border-radius:6px 0 0 6px;				
 				}
 			.filter__radio:checked + .filter__field,
 			.filter__ch:checked + .filter__field {
@@ -1005,9 +1000,7 @@ body {
 			padding:0 0 0 24px;
 			margin:0 0 0 -24px;
 			}
-			.filter__cats_list {
-
-				}
+			.filter__cats_list {}
 				.filter__cats_item {}
 					.filter__cats_label {
 						display:inline-block;
@@ -1191,9 +1184,7 @@ body {
 
 
 /* Offer card */
-.offercard {
-
-	}
+.offercard {}
 	.offercard__nav {
 		height:45px;
 		margin:1px 0 0;
@@ -1421,9 +1412,7 @@ body {
 	}
 
 /* User content */
-.usercontent {
-
-	}
+.usercontent {}
 .license .usercontent {
 	font:13px/18px Arial, Helvetica, sans-serif;
 	color:#999;
@@ -1520,9 +1509,7 @@ body {
 		.sociallogin__item a:hover .sociallogin__btn {
 			opacity:0.9;
 			}
-.login {
-
-	}
+.login {}
 	.login__welcome {
 		margin:4px 0 0 13px;
 		padding:0 0 0 80px;

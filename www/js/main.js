@@ -2,7 +2,7 @@ $(document).ready(function(){
 	// Layout
 	w = $(window).width()
 	h = $(window).height()
-	min_indent = 30
+	min_indent = 35
 	layout__init(min_indent)
 	position = 0
 
