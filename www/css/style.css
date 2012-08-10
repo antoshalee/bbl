@@ -1422,6 +1422,7 @@ body {
 		padding:20px 28px;
 		border:1px solid #dee3e6;
 		background:#f8f8f8;
+		white-space:break-word;
 		}
 .agreement {
 	float:right;
