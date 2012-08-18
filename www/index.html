@@ -25,6 +25,10 @@
 			<li class="sitenav__item"><a href="/business" class="sitenav__link">Бизнесу</a></li>
 		</ul>
 		<div class="bar">
+			<div class="invites">
+				<div class="invites__count js_popup" data-rel="invites"><span>25</span></div>
+				<div class="invites__title js_popup" data-rel="invites"><span>приглашений</span></div>
+			</div>
 			<div class="cityselect">
 				<div class="cityselect__current js_dropdownpopup" data-rel="city"><span>Москва</span></div>
 				<div class="dropdownpopup city" id="city">
@@ -939,6 +943,28 @@ background: linear-gradient(45deg,  #fdd803 0%,#078385 100%);
 			</li>
 		</ul>
 		<div class="login__skip"><span class="popup__closelink">Пропустить</span></div>
+	</div>
+</div>
+
+<div class="popup invites" id="invites">
+	<header class="popup__header">
+		<div class="popup__close"></div>
+		<h2 class="popup__header_title">Пригласите своих друзей</h2>
+	</header>
+	<div class="popup__body">
+		<div class="invitebox">
+			<div class="invitebox__count">25</div>
+			<div class="invitebox__form">
+				<form action="/" method="post">
+					<div class="input__wrap invitebox__input">
+						<input type="text" id="f_oldprice" name="oldprice" class="input">
+					</div>
+					<div class="invitebox__submit">
+						<button type="submit" class="btn">Отправить</button>
+					</div>
+				</form>
+			</div>
+		</div>
 	</div>
 </div>
 
