@@ -170,10 +170,40 @@
 								</div>
 							</div>
 						</fieldset>
-						<fieldset class="newoffer">
-							<h2 class="newoffer__header">Дополнительные изображения</h2>
+						<fieldset class="newoffer m-external">
+							<h2 class="newoffer__header">Дополнительные материалы</h2>
 							<div class="newoffer__desc">выводится на странице акции в маленьких окошках</div>
-							<input type="file" name="" id="">
+							<div id="dragarea" class="dragarea">
+								<form action="/" method="post">
+									<div class="dragarea__header">Перетащите фотографии в это окно</div>
+									<div class="videoupload">
+										<label for="" class="videoupload__label">Ссылка на видеоролик</label>
+										<div class="input__wrap">
+											<input type="text" class="input">
+										</div>
+										<output class="videoupload__output">Видеосервис не поддерживается либо ссылка является неправильной</output>
+									</div>
+									<ul class="dragarea__images">
+										<li class="dragarea__images_item">
+											<div class="dragarea__images_del">&times;</div>
+											<img src="" alt="" class="dragarea__images_preview">
+											<div class="dragarea__images_title">Картиночка.jpg</div>
+										</li>
+										<li class="dragarea__images_item">
+											<div class="dragarea__images_del">&times;</div>
+											<img src="" alt="" class="dragarea__images_preview">
+											<div class="dragarea__images_title">Картиночка с длинным названием.jpg</div>
+										</li>
+									</ul>
+									<div class="dragarea__submit">
+										<div class="btn gray customfileinput__wrap">
+											<span class="dragarea__icon photo"></span>Загрузить фото
+											<input type="file" name="" id="" class="customfileinput">
+										</div>
+										<span class="dragarea__addvideo"><span class="dragarea__icon video"></span>Добавить видео</span>
+									</div>
+								</form>
+							</div>
 						</fieldset>
 					</aside>
 					<div class="content__wrapper">
