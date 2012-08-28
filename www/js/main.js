@@ -371,6 +371,8 @@ function multiform() {
 		var indent = -535 * rel;
 		$('.multiform__wrap').stop().animate({'left':indent+'px'},400);
 
-
+		$('.multiform__control_prev, .multiform__control_next').hide();
+		if ( rel==0 ) $('.multiform__control_next').show();
+		if ( rel==2 ) $('.multiform__control_prev').show();
 	});
 }

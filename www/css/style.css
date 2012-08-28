@@ -2120,7 +2120,9 @@ body {
 	padding:42px 0 66px;
 	}
 .invitebox.m-query {
+	width:535px;
 	padding:69px 0;
+	text-align:center;
 	}
 	.invitebox__count {
 		display: inline-block;
@@ -2141,6 +2143,9 @@ body {
 			display: inline-block;
 			vertical-align:middle;
 			width:330px;
+			}
+		.m-query .invitebox__input {
+			width:240px;
 			}
 			.invitebox__input .input {
 				padding:10px 12px;
@@ -2268,6 +2273,32 @@ body {
 	height:197px;
 	overflow:hidden;
 	}
+	.multiform__control {}
+		.multiform__control_prev,
+		.multiform__control_next {
+			position:absolute;
+			top:76px;
+			width:24px;
+			height:25px;
+			opacity:0.5;
+			z-index:5;
+			transition:opacity 0.2s ease;
+			-webkit-transition:opacity 0.2s ease;
+			display:none;
+			cursor:pointer;
+			}
+		.multiform__control_prev {
+			left:8px;
+			background:url('../assets/icons/multiform.png') top left no-repeat;
+			}
+		.multiform__control_next {
+			right:8px;
+			background:url('../assets/icons/multiform.png') top right no-repeat;
+			}
+		.multiform__control_prev:hover,
+		.multiform__control_next:hover {
+			opacity:0.8;
+			}
 	.multiform__wrap {
 		position: absolute;
 		top:0;
