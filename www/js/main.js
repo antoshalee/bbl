@@ -36,6 +36,7 @@ $(document).ready(function(){
 
 	// Multiform
 	if ( $('.multiform').size() ) multiform();
+	multiform__go(2);
 })
 
 function handlers() {
@@ -358,21 +359,28 @@ function multiform() {
 		var rel = parseInt(el.attr('data-rel'));
 		var header = el.attr('data-header');
 		var subheader = el.attr('data-subheader');
-
-		// Header animation
-		$('.login__welcome').stop().animate({'opacity':0},250, function(){
-			var e = $(this);
-			e.find('.login__welcome_header').text(header);
-			e.find('.login__welcome_subheader').text(subheader);
-			$('.login__welcome').stop().animate({'opacity':1},250);
-		});
-
-		// Body animation
-		var indent = -535 * rel;
-		$('.multiform__wrap').stop().animate({'left':indent+'px'},400);
-
-		$('.multiform__control_prev, .multiform__control_next').hide();
-		if ( rel==0 ) $('.multiform__control_next').show();
-		if ( rel==2 ) $('.multiform__control_prev').show();
+		multiform__go(rel, header, subheader);
 	});
 }
+
+function multiform__go(rel, header, subheader) {
+	if ( !header || header == '' ) header = 'Добро пожаловать!';
+	if ( !subheader || subheader == '' ) subheader = 'Войдите и начните получать скидки';
+
+	// Header animation
+	$('.login__welcome').stop().animate({'opacity':0},250, function(){
+		var e = $(this);
+		e.find('.login__welcome_header').text(header);
+		e.find('.login__welcome_subheader').text(subheader);
+		$('.login__welcome').stop().animate({'opacity':1},250);
+	});
+
+	// Body animation
+	var indent = -535 * rel;
+	$('.multiform__wrap').stop().animate({'left':indent+'px'},400);
+
+	$('.multiform__control_prev, .multiform__control_next').hide();
+	if ( rel==0 ) $('.multiform__control_next').show();
+	if ( rel==2 ) $('.multiform__control_prev').show();
+}
+
