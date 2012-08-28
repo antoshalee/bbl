@@ -1211,7 +1211,6 @@ body {
 	.popup.clientlogin .popup__header,
 	.dropdownpopup.city .popup__header {
 		height:24px;
-
 		}
 	.popup.invites .popup__header {
 		height:41px;
@@ -1552,6 +1551,9 @@ body {
 	text-align:center;
 	margin:0 -15px;
 	}
+.sociallogin.m-inmultiform {
+	padding:69px 40px 0;
+	}
 	.sociallogin__item {
 		display:inline-block;
 		vertical-align:top;
@@ -1568,9 +1570,10 @@ body {
 			}
 .login {}
 	.login__welcome {
-		margin:4px 0 0 13px;
-		padding:0 0 0 80px;
-		background:url('../assets/welcome.png') top left no-repeat;
+		margin:4px 0 0 26px;
+		padding:0;
+		text-align:center;
+		/* background:url('../assets/welcome.png') top left no-repeat; */
 		}
 		.login__welcome_header {
 			font:27px/30px 'ProximaNovaRgBold', Arial, Helvetica, sans-serif;
@@ -2116,6 +2119,9 @@ body {
 	margin:auto;
 	padding:42px 0 66px;
 	}
+.invitebox.m-query {
+	padding:69px 0;
+	}
 	.invitebox__count {
 		display: inline-block;
 		vertical-align:middle;
@@ -2255,3 +2261,25 @@ body {
 		height:100%;
 		opacity:0;
 		}
+
+.multiform {
+	position: relative;
+	width:535px;
+	height:197px;
+	overflow:hidden;
+	}
+	.multiform__wrap {
+		position: absolute;
+		top:0;
+		left:-535px;
+		width:9999px;
+		}
+		.multiform__item {
+			float:left;
+			width:535px;
+			height:197px;
+			}
+			.multiform__main {
+				padding:69px 0 0;
+				text-align:center;
+				}

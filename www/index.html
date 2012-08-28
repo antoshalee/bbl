@@ -922,7 +922,8 @@ background: linear-gradient(45deg,  #fdd803 0%,#078385 100%);
 	</div>
 </div>
 
-<div class="popup login" id="login">
+<div id="overlay" style="display:block"></div>
+<div class="popup login" id="login" style="display:block">
 	<header class="popup__header">
 		<div class="popup__close"></div>
 		<hgroup class="login__welcome">
@@ -931,18 +932,47 @@ background: linear-gradient(45deg,  #fdd803 0%,#078385 100%);
 		</hgroup>
 	</header>
 	<div class="popup__body">
-		<ul class="sociallogin">
-			<li class="sociallogin__item">
-				<a href="#"><img src="assets/login/fb.png" width="140" height="40" alt="" class="sociallogin__btn"></a>
-			</li>
-			<li class="sociallogin__item">
-				<a href="#"><img src="assets/login/vk.png" width="140" height="40" alt="" class="sociallogin__btn"></a>
-			</li>
-			<li class="sociallogin__item">
-				<a href="#"><img src="assets/login/tw.png" width="140" height="40" alt="" class="sociallogin__btn"></a>
-			</li>
-		</ul>
-		<div class="login__skip"><span class="popup__closelink">Пропустить</span></div>
+		<div class="multiform">
+			<div class="multiform__wrap">
+				<div class="multiform__item" id="invite__frame">
+					<div class="invitebox m-query">
+						<div class="invitebox__form">
+							<form action="/" method="post">
+								<div class="input__wrap invitebox__input">
+									<input type="text" id="f_oldprice" name="oldprice" class="input" placeholder="Электронная почта">
+								</div>
+								<div class="invitebox__submit">
+									<button type="submit" class="btn">Отправить</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="multiform__item" id="main__frame">
+					<div class="multiform__main">
+						<div class="inlinefield">
+							<div class="btn js__multiform" data-rel="0" data-header="Получите приглашение!" data-subheader="Оставьте свой e-mail, мы вам напишем.">Запросить приглашение</div>
+						</div>
+						<div class="inlinefield">
+							<div class="btn gray js__multiform" data-rel="2" data-header="Добро пожаловать!" data-subheader="Войдите и начните получать скики">Войти</div>
+						</div>
+					</div>
+				</div>
+				<div class="multiform__item" id="login__frame">
+					<ul class="sociallogin m-inmultiform">
+						<li class="sociallogin__item">
+							<a href="#"><img src="assets/login/fb.png" width="140" height="40" alt="" class="sociallogin__btn"></a>
+						</li>
+						<li class="sociallogin__item">
+							<a href="#"><img src="assets/login/vk.png" width="140" height="40" alt="" class="sociallogin__btn"></a>
+						</li>
+						<li class="sociallogin__item">
+							<a href="#"><img src="assets/login/tw.png" width="140" height="40" alt="" class="sociallogin__btn"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 

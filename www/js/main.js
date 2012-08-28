@@ -33,6 +33,9 @@ $(document).ready(function(){
 	offers__init()
 	if ( $('.popup').size() ) popup__init()
 	if ( $('.checkbox').size() ) checkbox__init()
+
+	// Multiform
+	if ( $('.multiform').size() ) multiform();
 })
 
 function handlers() {
@@ -347,4 +350,27 @@ function ajax__offer(id) {
 	// END TEMPORARY
 
 	return true
+}
+
+function multiform() {
+	$('.js__multiform').bind('click', function(){
+		var el = $(this);
+		var rel = parseInt(el.attr('data-rel'));
+		var header = el.attr('data-header');
+		var subheader = el.attr('data-subheader');
+
+		// Header animation
+		$('.login__welcome').stop().animate({'opacity':0},250, function(){
+			var e = $(this);
+			e.find('.login__welcome_header').text(header);
+			e.find('.login__welcome_subheader').text(subheader);
+			$('.login__welcome').stop().animate({'opacity':1},250);
+		});
+
+		// Body animation
+		var indent = -535 * rel;
+		$('.multiform__wrap').stop().animate({'left':indent+'px'},400);
+
+
+	});
 }

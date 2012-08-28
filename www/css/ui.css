@@ -449,3 +449,9 @@
 	}
 * html .jspCorner {margin:0 -3px 0 0;} /* Yuk! CSS Hack for IE6 3 pixel bug :( */
 
+
+.inlinefield {
+	display:inline-block;
+	vertical-align:top;
+	margin:0 5px;
+	}
