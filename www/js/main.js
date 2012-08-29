@@ -37,6 +37,9 @@ $(document).ready(function(){
 	// Multiform
 	if ( $('.multiform').size() ) multiform();
 	multiform__go(2);
+
+	// Invitebox 
+	if ( $('.invitebox').size() ) invitebox__init();
 })
 
 function handlers() {
@@ -382,5 +385,17 @@ function multiform__go(rel, header, subheader) {
 	$('.multiform__control_prev, .multiform__control_next').hide();
 	if ( rel==0 ) $('.multiform__control_next').show();
 	if ( rel==2 ) $('.multiform__control_prev').show();
+}
+
+function invitebox__init() {
+	$('.invitebox__form form').submit(function(){
+		invitebox__loader(1);
+		return false;
+	});
+}
+
+function invitebox__loader(isStart) {
+	if (isStart) $('.invitebox__count').html('<span class="loader"></span>');
+	else $('.invitebox__count').html('');
 }
 

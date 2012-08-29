@@ -2134,6 +2134,13 @@ body {
 		font:bold 40px/72px 'Calibri', Arial, Helvetica, sans-serif;
 		color:#98a1a4;
 		}
+		.invitebox__count .loader {
+			display:inline-block;
+			width:24px;
+			height:24px;
+			background:url('../assets/loader_s.gif') center center no-repeat;
+			margin:-12px 0 0;
+			}
 	.invitebox__form {
 		display: inline-block;
 		vertical-align:middle;
