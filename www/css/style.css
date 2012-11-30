@@ -678,7 +678,19 @@ body {
 		height:200%;
 		}
 		.offer__brief {
+			position:relative;
 			height:50%;
+			}
+		.contest .offer__brief:before {
+			content:'';
+			position:absolute;
+			width:91px;
+			height:90px;
+			background:url('../assets/contest.png') top left no-repeat;
+			z-index:3;
+			}
+		.contest.completed .offer__brief:before {
+			background:url('../assets/contest.png') top right no-repeat;
 			}
 			.offer__brief_wrap {
 				padding:13px 15px;
@@ -701,14 +713,17 @@ body {
 					width:208px;
 					height:349px;
 					}
+				.contest .offer__brief_desc {
+					margin:8px 0 0 55px;
+					}
 				.offer__brief_desc {
 					margin:8px 0 0 0;
 					}
 					.offer__price {
 						position:relative;
-						left:-65px;
+						left:-55px;
 						float:left;
-						margin:0 -65px 0 0;
+						margin:0 -55px 0 0;
 						}
 						.offer__price_new {
 							font:17px/16px 'ProximaNovaRgBold';
@@ -727,6 +742,9 @@ body {
 							}
 							.offer__price_old .offer__price_sum {
 								text-decoration:line-through;
+								}
+							.contest .offer__price_old .offer__price_sum {
+								text-decoration:none;
 								}
 							.offer__price_old .offer__price_currence {
 								vertical-align:super;
@@ -1159,7 +1177,8 @@ body {
 				vertical-align:top;
 				overflow:hidden;
 				}
-			.popup__header_title .sale {
+			.popup__header_title .sale,
+			.popup__header_title .contest {
 				color:#e96a00;
 				}
 		.popup__header_params {
@@ -1176,6 +1195,9 @@ body {
 				color:#4f5359;
 				margin-right:25px;
 				}
+				.popup__header_val a {
+					color:#4f5359;
+					}
 	.popup__body {}
 
 
@@ -1258,13 +1280,16 @@ body {
 		}
 		.offercard__like {
 			float:right;
-			margin:9px 14px 0 0;
+			margin:6px 14px 0 0;
 			padding:0 30px 0 0;
-			width:300px;
+			width:282px;
 			font:12px/23px Arial, Helvetica, sans-serif;
 			color:#acb4b6;
 			text-align:left;
 			}
+			.offercard__like .btn-like {
+				margin-right:10px;
+				}
 		.offercard__nav_list {
 			display:inline-block;
 			vertical-align:top;
@@ -1580,6 +1605,9 @@ body {
 			color:#465161;
 			margin:0 0 3px;
 			}
+			.login__welcome_header strong {
+				color:#de6d07;
+				}
 		.login__welcome_subheader {
 			font:20px/30px 'ProximaNovaRgBold', Arial, Helvetica, sans-serif;
 			color:#9097a0;
@@ -2321,3 +2349,116 @@ body {
 				padding:69px 0 0;
 				text-align:center;
 				}
+
+.socialwidget {
+	text-align:center;
+	padding-bottom:35px;
+	font-family:Helvetica, Arial, sans-serif;
+	color:#666;
+	font-size:12px;
+	}
+	.socialwidget__frame {
+		height:180px;
+		padding:20px 0 0;
+		}
+	.socialwidget__field {
+		margin:20px 45px;
+		}
+	.socialwidget__submit {
+		text-align:left;
+		margin:12px 45px 0;
+		}
+		.socialwidget__submit .btn {
+			margin:0 20px 0 0;
+			}
+
+.people {
+	text-align: center;
+	margin:26px 27px 20px;
+	height:460px;
+	}
+	.people__list {
+		padding:4px 0 0;
+		}
+		.people__item {
+			display:inline-block;
+			width:140px;
+			margin:0 0 24px;
+			}
+			.people__userpic_wrap {
+				position:relative;
+				width:120px;
+				height:120px;
+				margin:0 auto 12px;
+				}
+				.people__userpic {
+					vertical-align:top;
+					width:120px;
+					height:120px;
+					background:#ccc;
+					}
+				.people__id {
+					display:none;
+					position: absolute;
+					top:-4px;
+					left:-4px;
+					width:120px;
+					height:120px;
+					border:4px solid #ea6b04;
+					background:rgba(0,0,0,0.5);
+					font:22px/120px 'ProximaNovaRgBold';
+					color:#fff;
+					}
+				.people__userpic_wrap:hover .people__id {
+					display: block;
+					}
+			.people__name {
+				font:12px Arial, Helvetica, sans-serif;
+				color:#35557b;
+				}
+				.people__name a {
+					text-decoration:none;
+					color:#35557b;
+					}
+
+/* PSEUDOSELECTS */
+.pselect {
+	position:relative;
+	display:inline-block;
+	width:234px;
+	border:1px solid #d7e5ec;
+	background:#fff url('../i/pselect.gif') right center no-repeat;
+	vertical-align:top;
+	text-align:left;
+	font:12px/12px "Tahoma";
+	cursor:pointer;
+	}
+	.pselect_viewport {
+		overflow:hidden;
+		padding:0 2px;
+		height:12px;
+		border-right:10px solid transparent;
+		white-space:nowrap;
+		}
+	.pselect_list {
+		position:absolute;
+		top:12px;
+		left:-1px;
+		z-index:1500;
+		display: none;
+		min-width:100%;
+		border:1px solid #d7e5ec;
+		background:#fff;
+		}
+	.active .pselect_list {
+		display: block;
+		}
+		.pselect_item {
+			padding:1px 2px 2px;
+			}
+		.pselect_item:hover {
+			background:#d7e5ec;
+			}
+	.pselect_input {
+		display:none;
+		}

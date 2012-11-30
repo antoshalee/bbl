@@ -355,7 +355,7 @@ background: linear-gradient(45deg,  #fdd803 0%,#078385 100%);
 					</div>
 				</div>
 			</article>
-			<article class="offer ss" id="2">
+			<article class="offer ss contest" id="2">
 				<div class="offer__wrapper">
 					<div class="offer__wrap">
 						<div class="offer__brief">
@@ -364,6 +364,16 @@ background: linear-gradient(45deg,  #fdd803 0%,#078385 100%);
 									<img src="content/offer_ss_4.jpg" width="208" height="141" alt="">
 								</div>
 								<div class="offer__brief_desc">
+									<div class="offer__price">
+										<div class="offer__price_new">
+											<strong class="offer__price_sum">04</strong>
+											<sup class="offer__price_currence">мин</sup>
+										</div>
+										<div class="offer__price_old">
+											<strong class="offer__price_sum">26</strong>
+											<sup class="offer__price_currence">сек.</sup>
+										</div>
+									</div>
 									<h1 class="offer__header_title">Брозовый загар в солярии за пол</h1>
 								</div>
 							</div>
@@ -394,7 +404,7 @@ background: linear-gradient(45deg,  #fdd803 0%,#078385 100%);
 					</div>
 				</div>
 			</article>
-			<article class="offer ss" id="3">
+			<article class="offer ss contest completed" id="3">
 				<div class="offer__wrapper">
 					<div class="offer__wrap">
 						<div class="offer__brief">
@@ -403,6 +413,16 @@ background: linear-gradient(45deg,  #fdd803 0%,#078385 100%);
 									<img src="content/offer_ss_2.jpg" width="208" height="141" alt="">
 								</div>
 								<div class="offer__brief_desc">
+									<div class="offer__price">
+										<div class="offer__price_new">
+											<strong class="offer__price_sum">04</strong>
+											<sup class="offer__price_currence">мин</sup>
+										</div>
+										<div class="offer__price_old">
+											<strong class="offer__price_sum">26</strong>
+											<sup class="offer__price_currence">сек.</sup>
+										</div>
+									</div>
 									<h1 class="offer__header_title">Брозовый загар в солярии за пол</h1>
 								</div>
 							</div>
@@ -785,7 +805,7 @@ background: linear-gradient(45deg,  #fdd803 0%,#078385 100%);
 <div id="overlay"></div>
 
 <div class="popup card" id="card">
-	<header class="popup__header">
+	<!--header class="popup__header">
 		<div class="popup__close"></div>
 		<h1 class="popup__header_title">
 			<span class="popup__header_title_wrap">Обучение аргентинскому танго для двоих. <span class="sale">Скидка 51%</span></span>
@@ -799,13 +819,28 @@ background: linear-gradient(45deg,  #fdd803 0%,#078385 100%);
 			<dt class="popup__header_param">Уже получили:</dt>
 			<dd class="popup__header_val">1700 чел.</dd>
 		</dl>
+	</header-->
+	<header class="popup__header">
+		<div class="popup__close"></div>
+		<h1 class="popup__header_title">
+			<span class="popup__header_title_wrap"><span class="contest">Конкурс: </span> Обучение аргентинскому танго для двоих.</span>
+			<div class="overflower">
+				<div class="overflower__in" title="Обучение аргентинскому танго для двоих.  Crblrf 51%"></div>
+			</div>
+		</h1>
+		<dl class="popup__header_params">
+			<dt class="popup__header_param">До конца акции:</dt>
+			<dd class="popup__header_val">2 минуты</dd>
+			<dt class="popup__header_param">Победители:</dt>
+			<dd class="popup__header_val"><a href="#">Мария Никитина</a> (№ 243) и Сергей Павлов (№ 15)</dd>
+		</dl>
 	</header>
 	<div class="popup__body offercard">
 		<nav class="offercard__nav">
 			<div class="offercard__like">
-				<span class="like disabled"><span class="like__icon">like</span></span>
+				<span class="btn-like"></span>
 				<input type="checkbox" class="checkbox" name="agreement" id="agreement">
-				<label for="agreement">я ознакомился с условиями</label>
+				<span>принять участие</span>
 			</div>
 			<ul class="offercard__nav_list">
 				<li class="offercard__nav_item current">
@@ -813,6 +848,9 @@ background: linear-gradient(45deg,  #fdd803 0%,#078385 100%);
 				</li>
 				<li class="offercard__nav_item">
 					<span class="js__link">Условия</span>
+				</li>
+				<li class="offercard__nav_item">
+					<span class="js__link">Участники</span>
 				</li>
 			</ul>
 		</nav>
@@ -918,12 +956,271 @@ background: linear-gradient(45deg,  #fdd803 0%,#078385 100%);
 					</form>
 				</div>
 			</article>
+			<article class="offercard__pages_item">
+				<div class="people scrollpane">
+					<ul class="people__list">
+						<li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">243</div>
+							</div>
+							<div class="people__name"><a href="#">Лена</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">251</div>
+							</div>
+							<div class="people__name"><a href="#">Татьяна</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">3</div>
+							</div>
+							<div class="people__name"><a href="#">Денис</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">187</div>
+							</div>
+							<div class="people__name"><a href="#">Маша</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">402</div>
+							</div>
+							<div class="people__name"><a href="#">Яна</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">1001</div>
+							</div>
+							<div class="people__name"><a href="#">Ксения</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">243</div>
+							</div>
+							<div class="people__name"><a href="#">Лена</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">251</div>
+							</div>
+							<div class="people__name"><a href="#">Татьяна</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">3</div>
+							</div>
+							<div class="people__name"><a href="#">Денис</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">187</div>
+							</div>
+							<div class="people__name"><a href="#">Маша</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">402</div>
+							</div>
+							<div class="people__name"><a href="#">Яна</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">1001</div>
+							</div>
+							<div class="people__name"><a href="#">Ксения</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">243</div>
+							</div>
+							<div class="people__name"><a href="#">Лена</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">251</div>
+							</div>
+							<div class="people__name"><a href="#">Татьяна</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">3</div>
+							</div>
+							<div class="people__name"><a href="#">Денис</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">187</div>
+							</div>
+							<div class="people__name"><a href="#">Маша</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">402</div>
+							</div>
+							<div class="people__name"><a href="#">Яна</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">1001</div>
+							</div>
+							<div class="people__name"><a href="#">Ксения</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">243</div>
+							</div>
+							<div class="people__name"><a href="#">Лена</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">251</div>
+							</div>
+							<div class="people__name"><a href="#">Татьяна</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">3</div>
+							</div>
+							<div class="people__name"><a href="#">Денис</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">187</div>
+							</div>
+							<div class="people__name"><a href="#">Маша</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">402</div>
+							</div>
+							<div class="people__name"><a href="#">Яна</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">1001</div>
+							</div>
+							<div class="people__name"><a href="#">Ксения</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">243</div>
+							</div>
+							<div class="people__name"><a href="#">Лена</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">251</div>
+							</div>
+							<div class="people__name"><a href="#">Татьяна</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">3</div>
+							</div>
+							<div class="people__name"><a href="#">Денис</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">187</div>
+							</div>
+							<div class="people__name"><a href="#">Маша</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">402</div>
+							</div>
+							<div class="people__name"><a href="#">Яна</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">1001</div>
+							</div>
+							<div class="people__name"><a href="#">Ксения</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">243</div>
+							</div>
+							<div class="people__name"><a href="#">Лена</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">251</div>
+							</div>
+							<div class="people__name"><a href="#">Татьяна</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">3</div>
+							</div>
+							<div class="people__name"><a href="#">Денис</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">187</div>
+							</div>
+							<div class="people__name"><a href="#">Маша</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">402</div>
+							</div>
+							<div class="people__name"><a href="#">Яна</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">1001</div>
+							</div>
+							<div class="people__name"><a href="#">Ксения</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">243</div>
+							</div>
+							<div class="people__name"><a href="#">Лена</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">251</div>
+							</div>
+							<div class="people__name"><a href="#">Татьяна</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">3</div>
+							</div>
+							<div class="people__name"><a href="#">Денис</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">187</div>
+							</div>
+							<div class="people__name"><a href="#">Маша</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">402</div>
+							</div>
+							<div class="people__name"><a href="#">Яна</a></div>
+						</li><li class="people__item">
+							<div class="people__userpic_wrap">
+								<img src="" alt="" class="people__userpic">
+								<div class="people__id">402</div>
+							</div>
+							<div class="people__name"><a href="#">Яна</a></div>
+						</li>
+					</ul>
+				</div>
+			</article>
 		</div>
 	</div>
 </div>
 
 <div id="overlay" style="display:block"></div>
-<div class="popup login" id="login" style="display:block">
+<div class="popup login" id="login">
 	<header class="popup__header">
 		<div class="popup__close"></div>
 		<hgroup class="login__welcome">
@@ -998,6 +1295,40 @@ background: linear-gradient(45deg,  #fdd803 0%,#078385 100%);
 					</div>
 				</form>
 			</div>
+		</div>
+	</div>
+</div>
+
+<div class="popup login" id="login" style="display:block">
+	<header class="popup__header">
+		<div class="popup__close"></div>
+		<hgroup class="login__welcome">
+			<h1 class="login__welcome_header">Успех! Ваш номер <strong>298</strong></h1>
+			<h2 class="login__welcome_subheader">Будь в курсе новых акций, поставь Like:</h2>
+		</hgroup>
+	</header>
+	<div class="popup__body">
+		<div class="socialwidget">
+			<div class="socialwidget__frame">
+				<img src="https://dl.dropbox.com/u/17459498/fb.gif" alt="">	
+			</div>
+			<div class="socialwidget__frame">
+				<img src="https://dl.dropbox.com/u/17459498/fb.gif" alt="">	
+			</div>
+			<form action="/" method="post">
+				<!--div class="socialwidget__field">
+					<div class="input__wrap">
+						<input type="text" id="f_oldprice" name="oldprice" class="input" placeholder="Электронная почта">
+					</div>
+				</div-->
+				<div class="socialwidget__submit">
+					<a href="#" class="btn">Продолжить</a>
+					<span>
+						<input type="checkbox" name="subscribe" id="subscribe-contest" class="checkbox" checked="checked">
+						<label for="subscribe-contest" class="label">Следить за ходом акции</label>
+					</span>
+				</div>
+			</form>
 		</div>
 	</div>
 </div>
